@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEAAAA951CDEE16200A33D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAA941CDEE16200A33D49 /* AppDelegate.swift */; };
+		BEAAAA971CDEE16200A33D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAA961CDEE16200A33D49 /* ViewController.swift */; };
+		BEAAAA9A1CDEE16200A33D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAA981CDEE16200A33D49 /* Main.storyboard */; };
+		BEAAAA9D1CDEE16200A33D49 /* MacroMania.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAA9B1CDEE16200A33D49 /* MacroMania.xcdatamodeld */; };
+		BEAAAA9F1CDEE16200A33D49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAA9E1CDEE16200A33D49 /* Assets.xcassets */; };
+		BEAAAAA21CDEE16200A33D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAA01CDEE16200A33D49 /* LaunchScreen.storyboard */; };
+		BEAAAAAC1CDEE1AA00A33D49 /* MeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAAB1CDEE1AA00A33D49 /* MeterView.swift */; };
+		BEAAAAAF1CDEE1E400A33D49 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAAE1CDEE1E400A33D49 /* Styles.swift */; };
+		BEAAAABD1CDEE26400A33D49 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAABC1CDEE26400A33D49 /* UIView+.swift */; };
+		BEAAAABF1CDEE2BA00A33D49 /* MeterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAABE1CDEE2BA00A33D49 /* MeterView.xib */; };
+		BEAAAAC31CDEE38600A33D49 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAC11CDEE38600A33D49 /* BaseViewController.swift */; };
+		BEAAAAC41CDEE38600A33D49 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAC21CDEE38600A33D49 /* BaseViewController.xib */; };
+		BEAAAAC71CDEE39300A33D49 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAC51CDEE39300A33D49 /* HomeViewController.swift */; };
+		BEAAAAC81CDEE39300A33D49 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAC61CDEE39300A33D49 /* HomeViewController.xib */; };
+		BEAAAACB1CDEEFF000A33D49 /* MacroKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAACA1CDEEFF000A33D49 /* MacroKeys.swift */; };
+		BEAAAACD1CDEF19600A33D49 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAACC1CDEF19600A33D49 /* MainTabBarController.swift */; };
+		BEAAAACE1CDEF21300A33D49 /* BlenderPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAB21CDEE24100A33D49 /* BlenderPro-Bold.otf */; };
+		BEAAAACF1CDEF21300A33D49 /* BlenderPro-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAB31CDEE24100A33D49 /* BlenderPro-BoldItalic.otf */; };
+		BEAAAAD01CDEF21300A33D49 /* BlenderPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAB41CDEE24100A33D49 /* BlenderPro-Book.otf */; };
+		BEAAAAD11CDEF21300A33D49 /* BlenderPro-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAB51CDEE24100A33D49 /* BlenderPro-BookItalic.otf */; };
+		BEAAAAD21CDEF21300A33D49 /* BlenderPro-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAB61CDEE24100A33D49 /* BlenderPro-Heavy.otf */; };
+		BEAAAAD31CDEF21300A33D49 /* BlenderPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAB71CDEE24100A33D49 /* BlenderPro-Medium.otf */; };
+		BEAAAAD41CDEF21300A33D49 /* BlenderPro-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAB81CDEE24100A33D49 /* BlenderPro-MediumItalic.otf */; };
+		BEAAAAD51CDEF21300A33D49 /* BlenderPro-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAB91CDEE24100A33D49 /* BlenderPro-Thin.otf */; };
+		BEAAAAD61CDEF21300A33D49 /* BlenderPro-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAABA1CDEE24100A33D49 /* BlenderPro-ThinItalic.otf */; };
+		BEAAAAD81CDEF71F00A33D49 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAD71CDEF71F00A33D49 /* UIColor+.swift */; };
+		BEAAAADB1CDF083E00A33D49 /* AddMacrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAD91CDF083E00A33D49 /* AddMacrosViewController.swift */; };
+		BEAAAADC1CDF083E00A33D49 /* AddMacrosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAADA1CDF083E00A33D49 /* AddMacrosViewController.xib */; };
+		BEAAAADE1CDF08B800A33D49 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAADD1CDF08B800A33D49 /* UIViewController+.swift */; };
+		BEAAAAE21CDF0A1400A33D49 /* AddMacrosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAE01CDF0A1400A33D49 /* AddMacrosTableViewCell.swift */; };
+		BEAAAAE31CDF0A1400A33D49 /* AddMacrosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAE11CDF0A1400A33D49 /* AddMacrosTableViewCell.xib */; };
+		BEAAAAE51CDF20A000A33D49 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAE41CDF20A000A33D49 /* BaseNavigationController.swift */; };
+		BEAAAAE71CDFC22000A33D49 /* RadialDotsTimeLapseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAE61CDFC22000A33D49 /* RadialDotsTimeLapseView.swift */; };
+		BEAAAAE91CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAE81CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BEAAAA911CDEE16200A33D49 /* MacroMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEAAAA941CDEE16200A33D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEAAAA961CDEE16200A33D49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEAAAA991CDEE16200A33D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEAAAA9C1CDEE16200A33D49 /* MacroMania.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacroMania.xcdatamodel; sourceTree = "<group>"; };
+		BEAAAA9E1CDEE16200A33D49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEAAAAA11CDEE16200A33D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEAAAAA31CDEE16200A33D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEAAAAAB1CDEE1AA00A33D49 /* MeterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterView.swift; sourceTree = "<group>"; };
+		BEAAAAAE1CDEE1E400A33D49 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		BEAAAAB21CDEE24100A33D49 /* BlenderPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-Bold.otf"; path = "Fonts/BlenderPro-Bold.otf"; sourceTree = "<group>"; };
+		BEAAAAB31CDEE24100A33D49 /* BlenderPro-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-BoldItalic.otf"; path = "Fonts/BlenderPro-BoldItalic.otf"; sourceTree = "<group>"; };
+		BEAAAAB41CDEE24100A33D49 /* BlenderPro-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-Book.otf"; path = "Fonts/BlenderPro-Book.otf"; sourceTree = "<group>"; };
+		BEAAAAB51CDEE24100A33D49 /* BlenderPro-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-BookItalic.otf"; path = "Fonts/BlenderPro-BookItalic.otf"; sourceTree = "<group>"; };
+		BEAAAAB61CDEE24100A33D49 /* BlenderPro-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-Heavy.otf"; path = "Fonts/BlenderPro-Heavy.otf"; sourceTree = "<group>"; };
+		BEAAAAB71CDEE24100A33D49 /* BlenderPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-Medium.otf"; path = "Fonts/BlenderPro-Medium.otf"; sourceTree = "<group>"; };
+		BEAAAAB81CDEE24100A33D49 /* BlenderPro-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-MediumItalic.otf"; path = "Fonts/BlenderPro-MediumItalic.otf"; sourceTree = "<group>"; };
+		BEAAAAB91CDEE24100A33D49 /* BlenderPro-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-Thin.otf"; path = "Fonts/BlenderPro-Thin.otf"; sourceTree = "<group>"; };
+		BEAAAABA1CDEE24100A33D49 /* BlenderPro-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BlenderPro-ThinItalic.otf"; path = "Fonts/BlenderPro-ThinItalic.otf"; sourceTree = "<group>"; };
+		BEAAAABC1CDEE26400A33D49 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		BEAAAABE1CDEE2BA00A33D49 /* MeterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeterView.xib; sourceTree = "<group>"; };
+		BEAAAAC11CDEE38600A33D49 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BEAAAAC21CDEE38600A33D49 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		BEAAAAC51CDEE39300A33D49 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BEAAAAC61CDEE39300A33D49 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BEAAAACA1CDEEFF000A33D49 /* MacroKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroKeys.swift; sourceTree = "<group>"; };
+		BEAAAACC1CDEF19600A33D49 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BEAAAAD71CDEF71F00A33D49 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		BEAAAAD91CDF083E00A33D49 /* AddMacrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMacrosViewController.swift; sourceTree = "<group>"; };
+		BEAAAADA1CDF083E00A33D49 /* AddMacrosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMacrosViewController.xib; sourceTree = "<group>"; };
+		BEAAAADD1CDF08B800A33D49 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		BEAAAAE01CDF0A1400A33D49 /* AddMacrosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMacrosTableViewCell.swift; sourceTree = "<group>"; };
+		BEAAAAE11CDF0A1400A33D49 /* AddMacrosTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMacrosTableViewCell.xib; sourceTree = "<group>"; };
+		BEAAAAE41CDF20A000A33D49 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		BEAAAAE61CDFC22000A33D49 /* RadialDotsTimeLapseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialDotsTimeLapseView.swift; sourceTree = "<group>"; };
+		BEAAAAE81CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadialDotsTimeLapseView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEAAAA8E1CDEE16200A33D49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEAAAA881CDEE16200A33D49 = {
+			isa = PBXGroup;
+			children = (
+				BEAAAA931CDEE16200A33D49 /* MacroMania */,
+				BEAAAA921CDEE16200A33D49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEAAAA921CDEE16200A33D49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAA911CDEE16200A33D49 /* MacroMania.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEAAAA931CDEE16200A33D49 /* MacroMania */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAAC91CDEEFE500A33D49 /* Constants */,
+				BEAAAAC01CDEE37700A33D49 /* Controllers */,
+				BEAAAABB1CDEE25B00A33D49 /* Extensions */,
+				BEAAAAB01CDEE22E00A33D49 /* Resources */,
+				BEAAAAAD1CDEE1DB00A33D49 /* Styles */,
+				BEAAAAA91CDEE19200A33D49 /* Views */,
+				BEAAAA941CDEE16200A33D49 /* AppDelegate.swift */,
+				BEAAAA961CDEE16200A33D49 /* ViewController.swift */,
+				BEAAAA981CDEE16200A33D49 /* Main.storyboard */,
+				BEAAAA9E1CDEE16200A33D49 /* Assets.xcassets */,
+				BEAAAAA01CDEE16200A33D49 /* LaunchScreen.storyboard */,
+				BEAAAAA31CDEE16200A33D49 /* Info.plist */,
+				BEAAAA9B1CDEE16200A33D49 /* MacroMania.xcdatamodeld */,
+			);
+			path = MacroMania;
+			sourceTree = "<group>";
+		};
+		BEAAAAA91CDEE19200A33D49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAADF1CDF0A0000A33D49 /* Cells */,
+				BEAAAAAA1CDEE19C00A33D49 /* Custom */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BEAAAAAA1CDEE19C00A33D49 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAAAB1CDEE1AA00A33D49 /* MeterView.swift */,
+				BEAAAABE1CDEE2BA00A33D49 /* MeterView.xib */,
+				BEAAAACC1CDEF19600A33D49 /* MainTabBarController.swift */,
+				BEAAAAE61CDFC22000A33D49 /* RadialDotsTimeLapseView.swift */,
+				BEAAAAE81CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
+		BEAAAAAD1CDEE1DB00A33D49 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAAAE1CDEE1E400A33D49 /* Styles.swift */,
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
+		BEAAAAB01CDEE22E00A33D49 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAAB11CDEE23500A33D49 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BEAAAAB11CDEE23500A33D49 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAAB21CDEE24100A33D49 /* BlenderPro-Bold.otf */,
+				BEAAAAB31CDEE24100A33D49 /* BlenderPro-BoldItalic.otf */,
+				BEAAAAB41CDEE24100A33D49 /* BlenderPro-Book.otf */,
+				BEAAAAB51CDEE24100A33D49 /* BlenderPro-BookItalic.otf */,
+				BEAAAAB61CDEE24100A33D49 /* BlenderPro-Heavy.otf */,
+				BEAAAAB71CDEE24100A33D49 /* BlenderPro-Medium.otf */,
+				BEAAAAB81CDEE24100A33D49 /* BlenderPro-MediumItalic.otf */,
+				BEAAAAB91CDEE24100A33D49 /* BlenderPro-Thin.otf */,
+				BEAAAABA1CDEE24100A33D49 /* BlenderPro-ThinItalic.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		BEAAAABB1CDEE25B00A33D49 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAABC1CDEE26400A33D49 /* UIView+.swift */,
+				BEAAAAD71CDEF71F00A33D49 /* UIColor+.swift */,
+				BEAAAADD1CDF08B800A33D49 /* UIViewController+.swift */,
+				BEAAAAE41CDF20A000A33D49 /* BaseNavigationController.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BEAAAAC01CDEE37700A33D49 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAAC11CDEE38600A33D49 /* BaseViewController.swift */,
+				BEAAAAC21CDEE38600A33D49 /* BaseViewController.xib */,
+				BEAAAAC51CDEE39300A33D49 /* HomeViewController.swift */,
+				BEAAAAC61CDEE39300A33D49 /* HomeViewController.xib */,
+				BEAAAAD91CDF083E00A33D49 /* AddMacrosViewController.swift */,
+				BEAAAADA1CDF083E00A33D49 /* AddMacrosViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BEAAAAC91CDEEFE500A33D49 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAACA1CDEEFF000A33D49 /* MacroKeys.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		BEAAAADF1CDF0A0000A33D49 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BEAAAAE01CDF0A1400A33D49 /* AddMacrosTableViewCell.swift */,
+				BEAAAAE11CDF0A1400A33D49 /* AddMacrosTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEAAAA901CDEE16200A33D49 /* MacroMania */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEAAAAA61CDEE16200A33D49 /* Build configuration list for PBXNativeTarget "MacroMania" */;
+			buildPhases = (
+				BEAAAA8D1CDEE16200A33D49 /* Sources */,
+				BEAAAA8E1CDEE16200A33D49 /* Frameworks */,
+				BEAAAA8F1CDEE16200A33D49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacroMania;
+			productName = MacroMania;
+			productReference = BEAAAA911CDEE16200A33D49 /* MacroMania.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEAAAA891CDEE16200A33D49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ken;
+				TargetAttributes = {
+					BEAAAA901CDEE16200A33D49 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = BEAAAA8C1CDEE16200A33D49 /* Build configuration list for PBXProject "MacroMania" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEAAAA881CDEE16200A33D49;
+			productRefGroup = BEAAAA921CDEE16200A33D49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEAAAA901CDEE16200A33D49 /* MacroMania */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEAAAA8F1CDEE16200A33D49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEAAAAA21CDEE16200A33D49 /* LaunchScreen.storyboard in Resources */,
+				BEAAAAD11CDEF21300A33D49 /* BlenderPro-BookItalic.otf in Resources */,
+				BEAAAACF1CDEF21300A33D49 /* BlenderPro-BoldItalic.otf in Resources */,
+				BEAAAAD51CDEF21300A33D49 /* BlenderPro-Thin.otf in Resources */,
+				BEAAAAD31CDEF21300A33D49 /* BlenderPro-Medium.otf in Resources */,
+				BEAAAAC41CDEE38600A33D49 /* BaseViewController.xib in Resources */,
+				BEAAAAD41CDEF21300A33D49 /* BlenderPro-MediumItalic.otf in Resources */,
+				BEAAAAD61CDEF21300A33D49 /* BlenderPro-ThinItalic.otf in Resources */,
+				BEAAAAE91CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib in Resources */,
+				BEAAAA9F1CDEE16200A33D49 /* Assets.xcassets in Resources */,
+				BEAAAADC1CDF083E00A33D49 /* AddMacrosViewController.xib in Resources */,
+				BEAAAAD21CDEF21300A33D49 /* BlenderPro-Heavy.otf in Resources */,
+				BEAAAACE1CDEF21300A33D49 /* BlenderPro-Bold.otf in Resources */,
+				BEAAAAE31CDF0A1400A33D49 /* AddMacrosTableViewCell.xib in Resources */,
+				BEAAAAD01CDEF21300A33D49 /* BlenderPro-Book.otf in Resources */,
+				BEAAAABF1CDEE2BA00A33D49 /* MeterView.xib in Resources */,
+				BEAAAA9A1CDEE16200A33D49 /* Main.storyboard in Resources */,
+				BEAAAAC81CDEE39300A33D49 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEAAAA8D1CDEE16200A33D49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEAAAABD1CDEE26400A33D49 /* UIView+.swift in Sources */,
+				BEAAAA971CDEE16200A33D49 /* ViewController.swift in Sources */,
+				BEAAAACD1CDEF19600A33D49 /* MainTabBarController.swift in Sources */,
+				BEAAAACB1CDEEFF000A33D49 /* MacroKeys.swift in Sources */,
+				BEAAAAD81CDEF71F00A33D49 /* UIColor+.swift in Sources */,
+				BEAAAADB1CDF083E00A33D49 /* AddMacrosViewController.swift in Sources */,
+				BEAAAAAF1CDEE1E400A33D49 /* Styles.swift in Sources */,
+				BEAAAAC71CDEE39300A33D49 /* HomeViewController.swift in Sources */,
+				BEAAAAE51CDF20A000A33D49 /* BaseNavigationController.swift in Sources */,
+				BEAAAA9D1CDEE16200A33D49 /* MacroMania.xcdatamodeld in Sources */,
+				BEAAAADE1CDF08B800A33D49 /* UIViewController+.swift in Sources */,
+				BEAAAAE21CDF0A1400A33D49 /* AddMacrosTableViewCell.swift in Sources */,
+				BEAAAAAC1CDEE1AA00A33D49 /* MeterView.swift in Sources */,
+				BEAAAAC31CDEE38600A33D49 /* BaseViewController.swift in Sources */,
+				BEAAAAE71CDFC22000A33D49 /* RadialDotsTimeLapseView.swift in Sources */,
+				BEAAAA951CDEE16200A33D49 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BEAAAA981CDEE16200A33D49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEAAAA991CDEE16200A33D49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEAAAAA01CDEE16200A33D49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEAAAAA11CDEE16200A33D49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEAAAAA41CDEE16200A33D49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEAAAAA51CDEE16200A33D49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEAAAAA71CDEE16200A33D49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MacroMania/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ken.MacroMania;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BEAAAAA81CDEE16200A33D49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MacroMania/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ken.MacroMania;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEAAAA8C1CDEE16200A33D49 /* Build configuration list for PBXProject "MacroMania" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEAAAAA41CDEE16200A33D49 /* Debug */,
+				BEAAAAA51CDEE16200A33D49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEAAAAA61CDEE16200A33D49 /* Build configuration list for PBXNativeTarget "MacroMania" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEAAAAA71CDEE16200A33D49 /* Debug */,
+				BEAAAAA81CDEE16200A33D49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BEAAAA9B1CDEE16200A33D49 /* MacroMania.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BEAAAA9C1CDEE16200A33D49 /* MacroMania.xcdatamodel */,
+			);
+			currentVersion = BEAAAA9C1CDEE16200A33D49 /* MacroMania.xcdatamodel */;
+			path = MacroMania.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BEAAAA891CDEE16200A33D49 /* Project object */;
+}
