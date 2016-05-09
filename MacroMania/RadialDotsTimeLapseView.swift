@@ -99,28 +99,36 @@ public class RadialDotsTimeLapseView: UIView {
     
     
     public func updateDotView() {
-        print("Updating")
-        let currentDate = NSDate()
-        for (index, dotViewModel) in dotViewModels.enumerate() {
-            dotViewModel.dotView.backgroundColor = getDotViewBackgroundColor(index, currentDate: currentDate)
-        }
+        var currentDotViewModel: DotViewModel?
         
         for dotViewModel in dotViewModels {
             if !dotViewModel.elapsed {
                 // toggle this view's background color
-                toggleDotViewBackgroundColor(dotViewModel.dotView)
+                currentDotViewModel = dotViewModel
                 break
             }
         }
+        
+        let currentDate = NSDate()
+        for (index, dotViewModel) in dotViewModels.enumerate() {
+            if let currentDotViewModel = currentDotViewModel where dotViewModel.index == currentDotViewModel.index {
+                continue
+            }
+            dotViewModel.dotView.backgroundColor = getDotViewBackgroundColor(index, currentDate: currentDate)
+        }
+        
+        toggleDotViewBackgroundColor(currentDotViewModel?.dotView)
     }
     
     // TODO: WHY THE FUCK IS THIS NOT WORKING
-    public func toggleDotViewBackgroundColor(dotView: UIView) {
-        if dotView.backgroundColor == RadialDotsTimeLapseView.kDotViewActiveColor {
-            dotView.backgroundColor = RadialDotsTimeLapseView.kDotViewInactiveColor
-        } else {
+    public func toggleDotViewBackgroundColor(dotView: UIView?) {
+        guard let dotView = dotView, backgroundColor = dotView.backgroundColor else { return }
+        if backgroundColor.getAlpha() == RadialDotsTimeLapseView.kDotViewInactiveColor.getAlpha() {
             dotView.backgroundColor = RadialDotsTimeLapseView.kDotViewActiveColor
+        } else {
+            dotView.backgroundColor = RadialDotsTimeLapseView.kDotViewInactiveColor
         }
+        
     }
     
     public func setup() {
