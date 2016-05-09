@@ -8,17 +8,34 @@
 
 import UIKit
 
+public class DotViewModel {
+    var elapsed: Bool = false
+    var index: Int
+    var dotView: UIView
+    
+    public init(index: Int, dotView: UIView, elapsed: Bool = false) {
+        self.index = index
+        self.elapsed = elapsed
+        self.dotView = dotView
+    }
+}
+
 public class RadialDotsTimeLapseView: UIView {
 
+    public static let kDotViewActiveColor = UIColor.whiteColor()
+    public static let kDotViewInactiveColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
+    
     public var dotsPerMinute = 4
     public var minutesPerCircle = 180
     public var outerRadius: CGFloat = 60
     public var innerRadius: CGFloat = 40
     public var kRadiusRatio: CGFloat = 1.25
-    public var dotViews: [UIView] = []
+    public var dotViewModels: [DotViewModel] = []
     
     public var isSetup = false
     public var dotViewTimer: NSTimer?
+    
+    public var activeDotIndex: Int = 0
 
     
     public required init?(coder aDecoder: NSCoder) {
@@ -51,7 +68,7 @@ public class RadialDotsTimeLapseView: UIView {
         self.backgroundColor = UIColor.clearColor()
     }
     
-    private func getDotViewBackgroundColor(dotIndex: Int, currentDate: NSDate) -> UIColor {
+    private func isElapsed(dotIndex: Int, currentDate: NSDate) -> Bool {
         let dotSecondValue = getDotSecondValue(dotIndex)
         let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         
@@ -59,10 +76,16 @@ public class RadialDotsTimeLapseView: UIView {
         
         let elapsedSeconds = currentDate.timeIntervalSinceDate(beginningDayDate)
         
-        if dotSecondValue < Int(elapsedSeconds) {
-            return UIColor.whiteColor()
+        return dotSecondValue < Int(elapsedSeconds)
+    }
+    
+    private func getDotViewBackgroundColor(dotIndex: Int, currentDate: NSDate) -> UIColor {
+        guard dotIndex < dotViewModels.count else { return RadialDotsTimeLapseView.kDotViewInactiveColor }
+        
+        if dotViewModels[dotIndex].elapsed {
+            return RadialDotsTimeLapseView.kDotViewActiveColor
         } else {
-            return UIColor.whiteColor().colorWithAlphaComponent(0.5)
+            return RadialDotsTimeLapseView.kDotViewInactiveColor
         }
     }
     
@@ -77,6 +100,27 @@ public class RadialDotsTimeLapseView: UIView {
     
     public func updateDotView() {
         print("Updating")
+        let currentDate = NSDate()
+        for (index, dotViewModel) in dotViewModels.enumerate() {
+            dotViewModel.dotView.backgroundColor = getDotViewBackgroundColor(index, currentDate: currentDate)
+        }
+        
+        for dotViewModel in dotViewModels {
+            if !dotViewModel.elapsed {
+                // toggle this view's background color
+                toggleDotViewBackgroundColor(dotViewModel.dotView)
+                break
+            }
+        }
+    }
+    
+    // TODO: WHY THE FUCK IS THIS NOT WORKING
+    public func toggleDotViewBackgroundColor(dotView: UIView) {
+        if dotView.backgroundColor == RadialDotsTimeLapseView.kDotViewActiveColor {
+            dotView.backgroundColor = RadialDotsTimeLapseView.kDotViewInactiveColor
+        } else {
+            dotView.backgroundColor = RadialDotsTimeLapseView.kDotViewActiveColor
+        }
     }
     
     public func setup() {
@@ -93,6 +137,7 @@ public class RadialDotsTimeLapseView: UIView {
                 let dotView = UIView(frame: CGRectMake(0, 0, 2, 2))
                 dotView.cornerRadius = 1
                 
+                // Get radians. Reverse direction and add M_PI
                 let radians = Double(-1 * minute * degreeMultiplier) * M_PI/180 + M_PI
                 let radius = innerRadius + CGFloat(CGFloat(dot) / CGFloat(dotsPerMinute)) * radialDifference
                 
@@ -103,7 +148,10 @@ public class RadialDotsTimeLapseView: UIView {
                 dotView.backgroundColor = getDotViewBackgroundColor(dotIndex, currentDate: currentDate)
                 addSubview(dotView)
                 
-                dotViews.append(dotView)
+                let elapsed = isElapsed(dotIndex, currentDate: currentDate)
+                let dotViewModel = DotViewModel(index: dotIndex, dotView: dotView, elapsed: elapsed)
+                
+                dotViewModels.append(dotViewModel)
             }
         }
         
