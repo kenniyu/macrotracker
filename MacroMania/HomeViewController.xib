@@ -3,17 +3,24 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MacroMania" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="MGo-j1-Mfl" id="zCL-HV-cob"/>
                 <outlet property="caloriesMeterView" destination="4rn-ok-gwa" id="sTN-mV-yyz"/>
+                <outlet property="caloriesTextLabel" destination="6GE-mD-f3b" id="Vqc-BR-Psv"/>
                 <outlet property="cancelButton" destination="kHV-fG-DHE" id="grd-EB-Rde"/>
                 <outlet property="carbsMeterView" destination="x34-Y1-2Kv" id="WRr-nq-wYA"/>
                 <outlet property="fatMeterView" destination="4xg-Q4-UZT" id="yoe-uQ-AnF"/>
+                <outlet property="gridBackgroundView" destination="6RD-B7-PdV" id="EOg-dZ-VoE"/>
+                <outlet property="mainCaloriesView" destination="rQ0-ft-C49" id="WPi-YA-o2p"/>
+                <outlet property="numCaloriesLabel" destination="qFT-Gs-CP3" id="sjR-Vu-woZ"/>
                 <outlet property="proteinMeterView" destination="ZF6-dI-zUZ" id="yKu-1N-bxR"/>
                 <outlet property="radialDotsTimeLapseView" destination="DM7-Cn-ioC" id="Cex-Ak-cxx"/>
+                <outlet property="radialGradientView" destination="NOK-sO-ND3" id="xFe-XK-WIj"/>
+                <outlet property="ringView" destination="yEo-PB-hhx" id="WeN-7V-wRe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,6 +29,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RD-B7-PdV" customClass="GridBackgroundView" customModule="MacroMania" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rn-ok-gwa" customClass="MeterView" customModule="MacroMania" customModuleProvider="target">
                     <rect key="frame" x="20" y="40" width="560" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,21 +41,21 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xg-Q4-UZT" customClass="MeterView" customModule="MacroMania" customModuleProvider="target">
-                    <rect key="frame" x="20" y="110" width="560" height="50"/>
+                    <rect key="frame" x="20" y="102" width="560" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5Jz-NE-3yE"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x34-Y1-2Kv" customClass="MeterView" customModule="MacroMania" customModuleProvider="target">
-                    <rect key="frame" x="20" y="180" width="560" height="50"/>
+                    <rect key="frame" x="20" y="164" width="560" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="J36-Hb-t4e"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZF6-dI-zUZ" customClass="MeterView" customModule="MacroMania" customModuleProvider="target">
-                    <rect key="frame" x="20" y="250" width="560" height="50"/>
+                    <rect key="frame" x="20" y="226" width="560" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="q7H-nk-tvR"/>
@@ -80,36 +91,122 @@
                         <action selector="resetMacros:" destination="-1" eventType="touchUpInside" id="8Mz-I1-Orl"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DM7-Cn-ioC" customClass="RadialDotsTimeLapseView" customModule="MacroMania" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5B-Pn-bBf" userLabel="Futuristic Container View">
                     <rect key="frame" x="180" y="230" width="240" height="240"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOK-sO-ND3" customClass="RadialGradientView" customModule="MacroMania" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-PB-hhx">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DM7-Cn-ioC" customClass="RadialDotsTimeLapseView" customModule="MacroMania" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="240" id="6dw-zQ-0ZL"/>
+                                <constraint firstAttribute="width" constant="240" id="qau-bf-TZA"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="6dw-zQ-0ZL"/>
+                                    <exclude reference="qau-bf-TZA"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQ0-ft-C49">
+                            <rect key="frame" x="89" y="90" width="62.5" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFT-Gs-CP3">
+                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GE-mD-f3b">
+                                    <rect key="frame" x="0.0" y="40" width="62.5" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="qFT-Gs-CP3" firstAttribute="leading" secondItem="rQ0-ft-C49" secondAttribute="leading" id="34x-wh-f6o"/>
+                                <constraint firstAttribute="bottom" secondItem="6GE-mD-f3b" secondAttribute="bottom" id="BgE-Qu-bYI"/>
+                                <constraint firstAttribute="trailing" secondItem="6GE-mD-f3b" secondAttribute="trailing" id="CMo-3V-hrh"/>
+                                <constraint firstItem="6GE-mD-f3b" firstAttribute="trailing" secondItem="qFT-Gs-CP3" secondAttribute="trailing" id="EwN-1f-w8E"/>
+                                <constraint firstItem="qFT-Gs-CP3" firstAttribute="top" secondItem="rQ0-ft-C49" secondAttribute="top" id="KSb-8O-S93"/>
+                                <constraint firstItem="6GE-mD-f3b" firstAttribute="height" secondItem="qFT-Gs-CP3" secondAttribute="height" multiplier="0.5" id="L4o-ge-2t3"/>
+                                <constraint firstItem="6GE-mD-f3b" firstAttribute="top" secondItem="qFT-Gs-CP3" secondAttribute="bottom" id="Lmk-6E-9aD"/>
+                                <constraint firstItem="qFT-Gs-CP3" firstAttribute="top" secondItem="rQ0-ft-C49" secondAttribute="top" id="MRq-KJ-6We"/>
+                                <constraint firstItem="6GE-mD-f3b" firstAttribute="top" secondItem="qFT-Gs-CP3" secondAttribute="bottom" id="QSs-EB-Z4u"/>
+                                <constraint firstItem="qFT-Gs-CP3" firstAttribute="centerY" secondItem="rQ0-ft-C49" secondAttribute="centerY" id="UIU-s7-li4"/>
+                                <constraint firstItem="6GE-mD-f3b" firstAttribute="leading" secondItem="qFT-Gs-CP3" secondAttribute="leading" id="YFg-0a-BG3"/>
+                                <constraint firstAttribute="trailing" secondItem="qFT-Gs-CP3" secondAttribute="trailing" id="nnt-TW-liy"/>
+                                <constraint firstAttribute="bottom" secondItem="6GE-mD-f3b" secondAttribute="bottom" id="raB-BB-Nmc"/>
+                                <constraint firstItem="6GE-mD-f3b" firstAttribute="leading" secondItem="rQ0-ft-C49" secondAttribute="leading" id="rql-tp-XJ8"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="MRq-KJ-6We"/>
+                                    <exclude reference="UIU-s7-li4"/>
+                                    <exclude reference="EwN-1f-w8E"/>
+                                    <exclude reference="Lmk-6E-9aD"/>
+                                    <exclude reference="YFg-0a-BG3"/>
+                                    <exclude reference="raB-BB-Nmc"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="240" id="6dw-zQ-0ZL"/>
-                        <constraint firstAttribute="width" constant="240" id="qau-bf-TZA"/>
+                        <constraint firstAttribute="bottom" secondItem="yEo-PB-hhx" secondAttribute="bottom" id="04j-I8-HIQ"/>
+                        <constraint firstItem="rQ0-ft-C49" firstAttribute="height" secondItem="DM7-Cn-ioC" secondAttribute="height" multiplier="0.25" id="09e-Zs-uXY"/>
+                        <constraint firstItem="DM7-Cn-ioC" firstAttribute="top" secondItem="d5B-Pn-bBf" secondAttribute="top" id="0AB-7W-OHL"/>
+                        <constraint firstAttribute="width" constant="240" id="1Ra-IW-Rqy"/>
+                        <constraint firstAttribute="height" constant="240" id="3Vj-c0-PMY"/>
+                        <constraint firstItem="NOK-sO-ND3" firstAttribute="leading" secondItem="d5B-Pn-bBf" secondAttribute="leading" id="8sr-zS-kQG"/>
+                        <constraint firstItem="yEo-PB-hhx" firstAttribute="leading" secondItem="d5B-Pn-bBf" secondAttribute="leading" id="9Ql-YF-5gN"/>
+                        <constraint firstItem="NOK-sO-ND3" firstAttribute="top" secondItem="d5B-Pn-bBf" secondAttribute="top" id="9kb-AH-pA7"/>
+                        <constraint firstItem="DM7-Cn-ioC" firstAttribute="leading" secondItem="d5B-Pn-bBf" secondAttribute="leading" id="CtS-d5-CGo"/>
+                        <constraint firstAttribute="bottom" secondItem="DM7-Cn-ioC" secondAttribute="bottom" id="MkB-LW-ChS"/>
+                        <constraint firstAttribute="trailing" secondItem="NOK-sO-ND3" secondAttribute="trailing" id="YGd-rV-cGw"/>
+                        <constraint firstItem="yEo-PB-hhx" firstAttribute="top" secondItem="d5B-Pn-bBf" secondAttribute="top" id="gc5-cq-oaT"/>
+                        <constraint firstItem="rQ0-ft-C49" firstAttribute="centerX" secondItem="d5B-Pn-bBf" secondAttribute="centerX" id="qLg-B6-dgE"/>
+                        <constraint firstAttribute="bottom" secondItem="NOK-sO-ND3" secondAttribute="bottom" id="rVt-Gi-4vw"/>
+                        <constraint firstItem="rQ0-ft-C49" firstAttribute="centerY" secondItem="d5B-Pn-bBf" secondAttribute="centerY" id="tuP-9J-xp8"/>
+                        <constraint firstAttribute="trailing" secondItem="DM7-Cn-ioC" secondAttribute="trailing" id="x3X-W0-sk7"/>
+                        <constraint firstAttribute="trailing" secondItem="yEo-PB-hhx" secondAttribute="trailing" id="xWq-vV-y2g"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="x34-Y1-2Kv" firstAttribute="leading" secondItem="4rn-ok-gwa" secondAttribute="leading" id="5sE-Ry-gJs"/>
+                <constraint firstItem="6RD-B7-PdV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6Kh-fQ-Qob"/>
                 <constraint firstItem="ZF6-dI-zUZ" firstAttribute="leading" secondItem="4rn-ok-gwa" secondAttribute="leading" id="AgL-n4-by8"/>
                 <constraint firstItem="4rn-ok-gwa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="IiH-Gm-RVw"/>
+                <constraint firstAttribute="bottom" secondItem="6RD-B7-PdV" secondAttribute="bottom" id="Iz9-Uu-Fmf"/>
                 <constraint firstItem="ZF6-dI-zUZ" firstAttribute="trailing" secondItem="4rn-ok-gwa" secondAttribute="trailing" id="Mgn-fQ-R7S"/>
                 <constraint firstItem="4xg-Q4-UZT" firstAttribute="leading" secondItem="4rn-ok-gwa" secondAttribute="leading" id="SAE-Iq-vL6"/>
-                <constraint firstItem="4xg-Q4-UZT" firstAttribute="top" secondItem="4rn-ok-gwa" secondAttribute="bottom" constant="20" id="T60-xU-Kst"/>
+                <constraint firstItem="4xg-Q4-UZT" firstAttribute="top" secondItem="4rn-ok-gwa" secondAttribute="bottom" constant="12" id="T60-xU-Kst"/>
                 <constraint firstItem="kHV-fG-DHE" firstAttribute="leading" secondItem="4rn-ok-gwa" secondAttribute="leading" id="TVq-jg-sij"/>
-                <constraint firstItem="ZF6-dI-zUZ" firstAttribute="top" secondItem="x34-Y1-2Kv" secondAttribute="bottom" constant="20" id="Te4-XC-IQ8"/>
+                <constraint firstItem="ZF6-dI-zUZ" firstAttribute="top" secondItem="x34-Y1-2Kv" secondAttribute="bottom" constant="12" id="Te4-XC-IQ8"/>
+                <constraint firstItem="d5B-Pn-bBf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vpe-hY-Kcj"/>
                 <constraint firstItem="MGo-j1-Mfl" firstAttribute="width" secondItem="kHV-fG-DHE" secondAttribute="width" id="Xc0-go-3qp"/>
+                <constraint firstItem="MGo-j1-Mfl" firstAttribute="top" secondItem="d5B-Pn-bBf" secondAttribute="bottom" constant="40" id="bYe-Lf-9GN"/>
                 <constraint firstItem="MGo-j1-Mfl" firstAttribute="height" secondItem="kHV-fG-DHE" secondAttribute="height" id="bZe-5B-RLl"/>
-                <constraint firstItem="MGo-j1-Mfl" firstAttribute="top" secondItem="DM7-Cn-ioC" secondAttribute="bottom" constant="40" id="cQX-au-dwT"/>
-                <constraint firstItem="DM7-Cn-ioC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dRk-qg-v0I"/>
+                <constraint firstAttribute="trailing" secondItem="6RD-B7-PdV" secondAttribute="trailing" id="gj1-cD-IJl"/>
                 <constraint firstItem="MGo-j1-Mfl" firstAttribute="bottom" secondItem="kHV-fG-DHE" secondAttribute="bottom" id="ii9-aG-Bvh"/>
                 <constraint firstItem="x34-Y1-2Kv" firstAttribute="trailing" secondItem="4rn-ok-gwa" secondAttribute="trailing" id="inH-93-rY2"/>
                 <constraint firstItem="4xg-Q4-UZT" firstAttribute="trailing" secondItem="4rn-ok-gwa" secondAttribute="trailing" id="itY-Cp-LdE"/>
                 <constraint firstItem="4rn-ok-gwa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="jba-cJ-sq0"/>
                 <constraint firstAttribute="bottom" secondItem="MGo-j1-Mfl" secondAttribute="bottom" constant="40" id="uy5-5G-2aw"/>
-                <constraint firstItem="x34-Y1-2Kv" firstAttribute="top" secondItem="4xg-Q4-UZT" secondAttribute="bottom" constant="20" id="xaQ-wv-1YD"/>
-                <constraint firstItem="x34-Y1-2Kv" firstAttribute="top" secondItem="4xg-Q4-UZT" secondAttribute="bottom" constant="20" id="yOe-VS-H7J"/>
+                <constraint firstItem="6RD-B7-PdV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vuH-f8-q77"/>
+                <constraint firstItem="x34-Y1-2Kv" firstAttribute="top" secondItem="4xg-Q4-UZT" secondAttribute="bottom" constant="12" id="xaQ-wv-1YD"/>
                 <constraint firstItem="MGo-j1-Mfl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="z6e-ut-SnO"/>
                 <constraint firstAttribute="trailing" secondItem="4rn-ok-gwa" secondAttribute="trailing" constant="20" id="zdC-kk-sno"/>
             </constraints>

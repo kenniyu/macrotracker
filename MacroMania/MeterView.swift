@@ -26,37 +26,6 @@ public class MeterView : UIView {
             updateBar()
         }
     }
-    //
-    //    private var layoutWidth: CGFloat = 0 {
-    //        willSet {
-    ////            if layoutHorizontally && width != newValue {
-    //                setNeedsLayout()
-    ////            }
-    //        }
-    //    }
-    //
-    //    private var layoutHeight: CGFloat = 0 {
-    //        willSet {
-    ////            if !layoutHorizontally && height != newValue {
-    //                setNeedsLayout()
-    ////            }
-    //        }
-    //    }
-    
-    //    public override var frame: CGRect {
-    //        didSet {
-    //            layoutWidth = frame.size.width
-    //            layoutHeight = frame.size.height
-    //        }
-    //    }
-    //
-    //    public override init(frame: CGRect) {
-    //        super.init(frame: frame)
-    //        let views = NSBundle.mainBundle().loadNibNamed("MeterView", owner: self, options: nil)
-    //        self.view = views.first as! UIView
-    //        addSubview(self.view)
-    //        setNeedsLayout()
-    //    }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

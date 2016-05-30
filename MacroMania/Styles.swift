@@ -30,16 +30,18 @@ struct Styles {
         static let Red = UIColor(red: 255.0/255.0, green: 53.0/255.0, blue: 46.0/255.0, alpha: 1.0)
         
         static let AppBackground = UIColor(red: 19/255.0, green: 19/255.0, blue: 19/255.0, alpha: 1)
+        static let AppRed = UIColor(red: 140/255.0, green: 0/255.0, blue: 40/255.0, alpha: 1)
         static let AppGold = UIColor(hexString: "F0CF3C")
         static let AppGray = UIColor(hexString: "A4A4A4")
         static let AppSilver = UIColor(hexString: "EAEAEA")
-        static let AppOrange = UIColor(red: 202/255.0, green: 148/255.0, blue: 38/255.0, alpha: 1)
+        static let AppPurple = UIColor(red: 65/255.0, green: 10/255.0, blue: 140/255.0, alpha: 1)
+        static let AppOrange = UIColor(red: 231/255.0, green: 66/255.0, blue: 0/255.0, alpha: 1)
+        static let AppGreen = UIColor(red: 92/255.0, green: 171/255.0, blue: 50/255.0, alpha: 1.0)
         
         static let White = UIColor.whiteColor()
         
         static let AppDarkBlue = UIColor(red: 18/255.0, green: 22/255.0, blue: 28/255.0, alpha: 1.0)
         static let AppDarkBlueLighter = UIColor(red: 22/255.0, green: 27/255.0, blue: 35/255.0, alpha: 1.0)
-        static let AppGreen = UIColor(red: 38/255.0, green: 206/255.0, blue: 77/255.0, alpha: 1.0)
         static let AppYellow = UIColor(red: 226/255.0, green: 205/255.0, blue: 0/255.0, alpha: 1.0)
 //        static let AppOrange = UIColor(red: 229/255.0, green: 124/255.0, blue: 22/255.0, alpha: 1.0)
         static let AppBlue = UIColor(red: 0/255.0, green: 174/255.0, blue: 240/255.0, alpha: 1.0)

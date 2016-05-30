@@ -17,6 +17,12 @@ public class HomeViewController: BaseViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var radialDotsTimeLapseView: RadialDotsTimeLapseView!
+    @IBOutlet weak var mainCaloriesView: UIView!
+    @IBOutlet weak var numCaloriesLabel: UILabel!
+    @IBOutlet weak var caloriesTextLabel: UILabel!
+    @IBOutlet weak var ringView: UIView!
+    @IBOutlet weak var radialGradientView: RadialGradientView!
+    @IBOutlet weak var gridBackgroundView: GridBackgroundView!
     
     
     public static let kNibName = "HomeViewController"
@@ -39,8 +45,31 @@ public class HomeViewController: BaseViewController {
         // Do any additional setup after loading the view.
         
         setupMeters()
+        setupMainCaloriesView()
+        
         setupButton()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.appBecameActive), name: UIApplicationDidBecomeActiveNotification, object: nil)
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        setupGridBackgroundView()
+    }
+    
+    public func setupGridBackgroundView() {
+        gridBackgroundView.setup()
+    }
+    
+    public func appBecameActive() {
+        print("Hello")
+        setupRingView()
+        radialDotsTimeLapseView.startRotate(60)
+    }
+    
+    public override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         setupRadialDotsTimeLapseView()
+        setupRingView()
     }
     
     private func setupButton() {
@@ -52,6 +81,15 @@ public class HomeViewController: BaseViewController {
     private func setupRadialDotsTimeLapseView() {
         radialDotsTimeLapseView.setup()
     }
+    
+    private func setupMainCaloriesView() {
+        numCaloriesLabel.font = Styles.Fonts.ThinXXXXLarge
+        numCaloriesLabel.textColor = Styles.Colors.AppSilver
+        caloriesTextLabel.font = Styles.Fonts.MediumLarge
+        caloriesTextLabel.textColor = Styles.Colors.AppSilver
+    }
+    
+    
     
     private func setupMeters() {
         let (totalCalories, fatGrams, carbsGrams, proteinGrams) = getMeterMaxValues()
@@ -81,7 +119,6 @@ public class HomeViewController: BaseViewController {
         
         return (totalCalories, fatGrams, carbsGrams, proteinGrams)
     }
-
     
     private func finalizeMeters() {
         let (maxCalories, maxFat, maxCarbs, maxProtein) = getMeterCurrentValues()
@@ -91,6 +128,8 @@ public class HomeViewController: BaseViewController {
             strongSelf.carbsMeterView.meterCurrent = maxCarbs
             strongSelf.proteinMeterView.meterCurrent = maxProtein
             strongSelf.caloriesMeterView.meterCurrent = maxCalories
+            
+            strongSelf.updateViews()
         })
     }
     
@@ -113,9 +152,37 @@ public class HomeViewController: BaseViewController {
         carbsMeterView.meterCurrent = 0
         proteinMeterView.meterCurrent = 0
         caloriesMeterView.meterCurrent = 0
-        storeMacros()
+        updateViews()
     }
     
+    public func updateViews() {
+        updateMainCaloriesView()
+        storeMacros()
+        
+        let fatPct = fatMeterView.meterCurrent / fatMeterView.meterMax
+        let carbsPct = carbsMeterView.meterCurrent / carbsMeterView.meterMax
+        let proteinPct = proteinMeterView.meterCurrent / proteinMeterView.meterMax
+        
+        radialDotsTimeLapseView.setupMacroRings([fatPct, carbsPct, proteinPct])
+    }
+    
+    public func updateMainCaloriesView() {
+        numCaloriesLabel.text = "\(Int(caloriesMeterView.meterCurrent))"
+        caloriesTextLabel.text = "Calories".uppercaseString
+    }
+    
+    public func setupRingView() {
+        let gradientRingLayer = RingGradientLayer(bounds: CGRectMake(0, 0, ringView.width, ringView.height), position:CGPointMake(ringView.width/2, ringView.height/2), fromColor: Styles.Colors.White, toColor: Styles.Colors.AppPurple.colorWithAlphaComponent(0.1), linewidth:2.0, toValue: 0)
+        ringView.layer.addSublayer(gradientRingLayer)
+        
+        gradientRingLayer.animateCircleTo(1, fromValue: 0, toValue: 0.999)
+        animateRingView()
+    }
+    
+    private func animateRingView() {
+        let duration = 3.0
+        ringView.rotate("ringAnimation", duration: duration, direction: 0)
+    }
 }
 
 extension HomeViewController: AddMacrosViewControllerDelegate {
@@ -127,7 +194,7 @@ extension HomeViewController: AddMacrosViewControllerDelegate {
             strongSelf.proteinMeterView.meterCurrent += CGFloat(protein)
             strongSelf.caloriesMeterView.meterCurrent += CGFloat(fat * 9 + carbs * 4 + protein * 4)
             
-            strongSelf.storeMacros()
+            strongSelf.updateViews()
         })
     }
 }

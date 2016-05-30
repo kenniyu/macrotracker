@@ -164,6 +164,8 @@ extension UIView {
             self.layer.cornerRadius = newValue
         }
     }
+    
+    
 }
 
 // Gradient Extensions
@@ -303,5 +305,24 @@ extension UIView {
         borderLayer.backgroundColor = color.CGColor
         layer.addSublayer(borderLayer)
         return borderLayer
+    }
+    
+    func rotate(key: String, duration: Double = 1, direction: Int = 1) {
+//        let kRotationAnimationKey = "com.myapplication.rotationanimationkey" // Any key
+        if layer.animationForKey(key) == nil {
+            let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+            
+            if direction == 1 {
+                rotationAnimation.fromValue = 0.0
+                rotationAnimation.toValue = Float(M_PI * 2.0)
+            } else {
+                rotationAnimation.fromValue = Float(M_PI * 2.0)
+                rotationAnimation.toValue = 0
+            }
+            rotationAnimation.duration = duration
+            rotationAnimation.repeatCount = Float.infinity
+            
+            layer.addAnimation(rotationAnimation, forKey: key)
+        }
     }
 }

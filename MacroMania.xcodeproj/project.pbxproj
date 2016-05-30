@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE58785E1CE589E8005045A3 /* GridBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58785D1CE589E8005045A3 /* GridBackgroundView.swift */; };
+		BE5878601CE58A30005045A3 /* GridBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE58785F1CE58A30005045A3 /* GridBackgroundView.xib */; };
+		BE5BC8AA1CE190E900F4C6DA /* RingGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC8A91CE190E900F4C6DA /* RingGradientLayer.swift */; };
+		BE5BC8AC1CE1A0D700F4C6DA /* RadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC8AB1CE1A0D700F4C6DA /* RadialGradientLayer.swift */; };
+		BE5BC8AE1CE1AA8900F4C6DA /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC8AD1CE1AA8900F4C6DA /* RadialGradientView.swift */; };
+		BE8176FA1CFCBF3A008628A8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8176F81CFCBF3A008628A8 /* TodayViewController.swift */; };
+		BE8176FB1CFCBF3A008628A8 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8176F91CFCBF3A008628A8 /* TodayViewController.xib */; };
+		BE8176FF1CFCC110008628A8 /* TimeMealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8176FD1CFCC110008628A8 /* TimeMealTableViewCell.swift */; };
+		BE8177001CFCC110008628A8 /* TimeMealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8176FE1CFCC110008628A8 /* TimeMealTableViewCell.xib */; };
+		BE8177031CFCC261008628A8 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177021CFCC261008628A8 /* FoodItem.swift */; };
+		BE8177051CFCC269008628A8 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177041CFCC269008628A8 /* Meal.swift */; };
+		BE8177081CFCC697008628A8 /* TextUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177071CFCC697008628A8 /* TextUtils.swift */; };
 		BEAAAA951CDEE16200A33D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAA941CDEE16200A33D49 /* AppDelegate.swift */; };
 		BEAAAA971CDEE16200A33D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAA961CDEE16200A33D49 /* ViewController.swift */; };
 		BEAAAA9A1CDEE16200A33D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAA981CDEE16200A33D49 /* Main.storyboard */; };
@@ -44,6 +56,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE58785D1CE589E8005045A3 /* GridBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridBackgroundView.swift; sourceTree = "<group>"; };
+		BE58785F1CE58A30005045A3 /* GridBackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridBackgroundView.xib; sourceTree = "<group>"; };
+		BE5BC8A91CE190E900F4C6DA /* RingGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingGradientLayer.swift; sourceTree = "<group>"; };
+		BE5BC8AB1CE1A0D700F4C6DA /* RadialGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientLayer.swift; sourceTree = "<group>"; };
+		BE5BC8AD1CE1AA8900F4C6DA /* RadialGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientView.swift; sourceTree = "<group>"; };
+		BE8176F81CFCBF3A008628A8 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BE8176F91CFCBF3A008628A8 /* TodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
+		BE8176FD1CFCC110008628A8 /* TimeMealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeMealTableViewCell.swift; sourceTree = "<group>"; };
+		BE8176FE1CFCC110008628A8 /* TimeMealTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeMealTableViewCell.xib; sourceTree = "<group>"; };
+		BE8177021CFCC261008628A8 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		BE8177041CFCC269008628A8 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		BE8177071CFCC697008628A8 /* TextUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextUtils.swift; sourceTree = "<group>"; };
 		BEAAAA911CDEE16200A33D49 /* MacroMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAAAA941CDEE16200A33D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEAAAA961CDEE16200A33D49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +117,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE8177011CFCC251008628A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE8177021CFCC261008628A8 /* FoodItem.swift */,
+				BE8177041CFCC269008628A8 /* Meal.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BE8177061CFCC68E008628A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE8177071CFCC697008628A8 /* TextUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		BEAAAA881CDEE16200A33D49 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +153,10 @@
 		BEAAAA931CDEE16200A33D49 /* MacroMania */ = {
 			isa = PBXGroup;
 			children = (
+				BE8177061CFCC68E008628A8 /* Utils */,
+				BE8177011CFCC251008628A8 /* Models */,
 				BEAAAAC91CDEEFE500A33D49 /* Constants */,
-				BEAAAAC01CDEE37700A33D49 /* Controllers */,
+				BEAAAAC01CDEE37700A33D49 /* View Controllers */,
 				BEAAAABB1CDEE25B00A33D49 /* Extensions */,
 				BEAAAAB01CDEE22E00A33D49 /* Resources */,
 				BEAAAAAD1CDEE1DB00A33D49 /* Styles */,
@@ -146,6 +189,11 @@
 				BEAAAACC1CDEF19600A33D49 /* MainTabBarController.swift */,
 				BEAAAAE61CDFC22000A33D49 /* RadialDotsTimeLapseView.swift */,
 				BEAAAAE81CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib */,
+				BE5BC8A91CE190E900F4C6DA /* RingGradientLayer.swift */,
+				BE5BC8AB1CE1A0D700F4C6DA /* RadialGradientLayer.swift */,
+				BE5BC8AD1CE1AA8900F4C6DA /* RadialGradientView.swift */,
+				BE58785D1CE589E8005045A3 /* GridBackgroundView.swift */,
+				BE58785F1CE58A30005045A3 /* GridBackgroundView.xib */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -193,7 +241,7 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		BEAAAAC01CDEE37700A33D49 /* Controllers */ = {
+		BEAAAAC01CDEE37700A33D49 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BEAAAAC11CDEE38600A33D49 /* BaseViewController.swift */,
@@ -202,8 +250,10 @@
 				BEAAAAC61CDEE39300A33D49 /* HomeViewController.xib */,
 				BEAAAAD91CDF083E00A33D49 /* AddMacrosViewController.swift */,
 				BEAAAADA1CDF083E00A33D49 /* AddMacrosViewController.xib */,
+				BE8176F81CFCBF3A008628A8 /* TodayViewController.swift */,
+				BE8176F91CFCBF3A008628A8 /* TodayViewController.xib */,
 			);
-			name = Controllers;
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		BEAAAAC91CDEEFE500A33D49 /* Constants */ = {
@@ -219,6 +269,8 @@
 			children = (
 				BEAAAAE01CDF0A1400A33D49 /* AddMacrosTableViewCell.swift */,
 				BEAAAAE11CDF0A1400A33D49 /* AddMacrosTableViewCell.xib */,
+				BE8176FD1CFCC110008628A8 /* TimeMealTableViewCell.swift */,
+				BE8176FE1CFCC110008628A8 /* TimeMealTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -281,12 +333,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8176FB1CFCBF3A008628A8 /* TodayViewController.xib in Resources */,
 				BEAAAAA21CDEE16200A33D49 /* LaunchScreen.storyboard in Resources */,
 				BEAAAAD11CDEF21300A33D49 /* BlenderPro-BookItalic.otf in Resources */,
 				BEAAAACF1CDEF21300A33D49 /* BlenderPro-BoldItalic.otf in Resources */,
+				BE8177001CFCC110008628A8 /* TimeMealTableViewCell.xib in Resources */,
 				BEAAAAD51CDEF21300A33D49 /* BlenderPro-Thin.otf in Resources */,
 				BEAAAAD31CDEF21300A33D49 /* BlenderPro-Medium.otf in Resources */,
 				BEAAAAC41CDEE38600A33D49 /* BaseViewController.xib in Resources */,
+				BE5878601CE58A30005045A3 /* GridBackgroundView.xib in Resources */,
 				BEAAAAD41CDEF21300A33D49 /* BlenderPro-MediumItalic.otf in Resources */,
 				BEAAAAD61CDEF21300A33D49 /* BlenderPro-ThinItalic.otf in Resources */,
 				BEAAAAE91CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib in Resources */,
@@ -310,20 +365,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAAAABD1CDEE26400A33D49 /* UIView+.swift in Sources */,
+				BE8176FF1CFCC110008628A8 /* TimeMealTableViewCell.swift in Sources */,
 				BEAAAA971CDEE16200A33D49 /* ViewController.swift in Sources */,
 				BEAAAACD1CDEF19600A33D49 /* MainTabBarController.swift in Sources */,
+				BE8177051CFCC269008628A8 /* Meal.swift in Sources */,
 				BEAAAACB1CDEEFF000A33D49 /* MacroKeys.swift in Sources */,
+				BE58785E1CE589E8005045A3 /* GridBackgroundView.swift in Sources */,
 				BEAAAAD81CDEF71F00A33D49 /* UIColor+.swift in Sources */,
+				BE8177081CFCC697008628A8 /* TextUtils.swift in Sources */,
 				BEAAAADB1CDF083E00A33D49 /* AddMacrosViewController.swift in Sources */,
 				BEAAAAAF1CDEE1E400A33D49 /* Styles.swift in Sources */,
+				BE8176FA1CFCBF3A008628A8 /* TodayViewController.swift in Sources */,
 				BEAAAAC71CDEE39300A33D49 /* HomeViewController.swift in Sources */,
 				BEAAAAE51CDF20A000A33D49 /* BaseNavigationController.swift in Sources */,
 				BEAAAA9D1CDEE16200A33D49 /* MacroMania.xcdatamodeld in Sources */,
+				BE5BC8AC1CE1A0D700F4C6DA /* RadialGradientLayer.swift in Sources */,
 				BEAAAADE1CDF08B800A33D49 /* UIViewController+.swift in Sources */,
 				BEAAAAE21CDF0A1400A33D49 /* AddMacrosTableViewCell.swift in Sources */,
 				BEAAAAAC1CDEE1AA00A33D49 /* MeterView.swift in Sources */,
+				BE8177031CFCC261008628A8 /* FoodItem.swift in Sources */,
 				BEAAAAC31CDEE38600A33D49 /* BaseViewController.swift in Sources */,
 				BEAAAAE71CDFC22000A33D49 /* RadialDotsTimeLapseView.swift in Sources */,
+				BE5BC8AA1CE190E900F4C6DA /* RingGradientLayer.swift in Sources */,
+				BE5BC8AE1CE1AA8900F4C6DA /* RadialGradientView.swift in Sources */,
 				BEAAAA951CDEE16200A33D49 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +540,7 @@
 				BEAAAAA81CDEE16200A33D49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
