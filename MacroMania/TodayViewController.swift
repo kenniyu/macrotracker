@@ -42,7 +42,8 @@ public class TodayViewController: BaseViewController {
     }
     
     private func setupNavBar() {
-        createAddButton()
+        let addButton = createAddButton()
+        addRightBarButtons([addButton])
     }
     
     private func createDate(hour: Int = 0) -> NSDate {
@@ -93,7 +94,9 @@ public class TodayViewController: BaseViewController {
     }
     
     public override func add() {
-        <#code#>
+        let addViewController = AddMealViewController()
+        let navigationController = UINavigationController(rootViewController: addViewController)
+        presentViewController(navigationController, animated: true, completion: nil)
     }
 }
 

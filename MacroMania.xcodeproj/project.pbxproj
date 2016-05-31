@@ -19,6 +19,14 @@
 		BE8177031CFCC261008628A8 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177021CFCC261008628A8 /* FoodItem.swift */; };
 		BE8177051CFCC269008628A8 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177041CFCC269008628A8 /* Meal.swift */; };
 		BE8177081CFCC697008628A8 /* TextUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177071CFCC697008628A8 /* TextUtils.swift */; };
+		BE81770C1CFCDC9B008628A8 /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81770A1CFCDC9B008628A8 /* AddMealViewController.swift */; };
+		BE81770D1CFCDC9B008628A8 /* AddMealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE81770B1CFCDC9B008628A8 /* AddMealViewController.xib */; };
+		BE81770F1CFD04FE008628A8 /* FoodItemModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81770E1CFD04FE008628A8 /* FoodItemModal.swift */; };
+		BE8177111CFD050E008628A8 /* FoodItemModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8177101CFD050E008628A8 /* FoodItemModal.xib */; };
+		BE8177131CFD306B008628A8 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177121CFD306B008628A8 /* UIImage+.swift */; };
+		BE8177161CFD3AF8008628A8 /* FoodItemModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177141CFD3AF8008628A8 /* FoodItemModalViewController.swift */; };
+		BE8177171CFD3AF8008628A8 /* FoodItemModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8177151CFD3AF8008628A8 /* FoodItemModalViewController.xib */; };
+		BE8177191CFD4FD6008628A8 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8177181CFD4FD6008628A8 /* UITextField+.swift */; };
 		BEAAAA951CDEE16200A33D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAA941CDEE16200A33D49 /* AppDelegate.swift */; };
 		BEAAAA971CDEE16200A33D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAA961CDEE16200A33D49 /* ViewController.swift */; };
 		BEAAAA9A1CDEE16200A33D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAA981CDEE16200A33D49 /* Main.storyboard */; };
@@ -68,6 +76,14 @@
 		BE8177021CFCC261008628A8 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		BE8177041CFCC269008628A8 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		BE8177071CFCC697008628A8 /* TextUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextUtils.swift; sourceTree = "<group>"; };
+		BE81770A1CFCDC9B008628A8 /* AddMealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
+		BE81770B1CFCDC9B008628A8 /* AddMealViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMealViewController.xib; sourceTree = "<group>"; };
+		BE81770E1CFD04FE008628A8 /* FoodItemModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemModal.swift; sourceTree = "<group>"; };
+		BE8177101CFD050E008628A8 /* FoodItemModal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemModal.xib; sourceTree = "<group>"; };
+		BE8177121CFD306B008628A8 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		BE8177141CFD3AF8008628A8 /* FoodItemModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemModalViewController.swift; sourceTree = "<group>"; };
+		BE8177151CFD3AF8008628A8 /* FoodItemModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemModalViewController.xib; sourceTree = "<group>"; };
+		BE8177181CFD4FD6008628A8 /* UITextField+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		BEAAAA911CDEE16200A33D49 /* MacroMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAAAA941CDEE16200A33D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEAAAA961CDEE16200A33D49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +210,8 @@
 				BE5BC8AD1CE1AA8900F4C6DA /* RadialGradientView.swift */,
 				BE58785D1CE589E8005045A3 /* GridBackgroundView.swift */,
 				BE58785F1CE58A30005045A3 /* GridBackgroundView.xib */,
+				BE81770E1CFD04FE008628A8 /* FoodItemModal.swift */,
+				BE8177101CFD050E008628A8 /* FoodItemModal.xib */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -237,6 +255,8 @@
 				BEAAAAD71CDEF71F00A33D49 /* UIColor+.swift */,
 				BEAAAADD1CDF08B800A33D49 /* UIViewController+.swift */,
 				BEAAAAE41CDF20A000A33D49 /* BaseNavigationController.swift */,
+				BE8177121CFD306B008628A8 /* UIImage+.swift */,
+				BE8177181CFD4FD6008628A8 /* UITextField+.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +272,10 @@
 				BEAAAADA1CDF083E00A33D49 /* AddMacrosViewController.xib */,
 				BE8176F81CFCBF3A008628A8 /* TodayViewController.swift */,
 				BE8176F91CFCBF3A008628A8 /* TodayViewController.xib */,
+				BE81770A1CFCDC9B008628A8 /* AddMealViewController.swift */,
+				BE81770B1CFCDC9B008628A8 /* AddMealViewController.xib */,
+				BE8177141CFD3AF8008628A8 /* FoodItemModalViewController.swift */,
+				BE8177151CFD3AF8008628A8 /* FoodItemModalViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -336,16 +360,19 @@
 				BE8176FB1CFCBF3A008628A8 /* TodayViewController.xib in Resources */,
 				BEAAAAA21CDEE16200A33D49 /* LaunchScreen.storyboard in Resources */,
 				BEAAAAD11CDEF21300A33D49 /* BlenderPro-BookItalic.otf in Resources */,
+				BE8177171CFD3AF8008628A8 /* FoodItemModalViewController.xib in Resources */,
 				BEAAAACF1CDEF21300A33D49 /* BlenderPro-BoldItalic.otf in Resources */,
 				BE8177001CFCC110008628A8 /* TimeMealTableViewCell.xib in Resources */,
 				BEAAAAD51CDEF21300A33D49 /* BlenderPro-Thin.otf in Resources */,
 				BEAAAAD31CDEF21300A33D49 /* BlenderPro-Medium.otf in Resources */,
 				BEAAAAC41CDEE38600A33D49 /* BaseViewController.xib in Resources */,
 				BE5878601CE58A30005045A3 /* GridBackgroundView.xib in Resources */,
+				BE81770D1CFCDC9B008628A8 /* AddMealViewController.xib in Resources */,
 				BEAAAAD41CDEF21300A33D49 /* BlenderPro-MediumItalic.otf in Resources */,
 				BEAAAAD61CDEF21300A33D49 /* BlenderPro-ThinItalic.otf in Resources */,
 				BEAAAAE91CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib in Resources */,
 				BEAAAA9F1CDEE16200A33D49 /* Assets.xcassets in Resources */,
+				BE8177111CFD050E008628A8 /* FoodItemModal.xib in Resources */,
 				BEAAAADC1CDF083E00A33D49 /* AddMacrosViewController.xib in Resources */,
 				BEAAAAD21CDEF21300A33D49 /* BlenderPro-Heavy.otf in Resources */,
 				BEAAAACE1CDEF21300A33D49 /* BlenderPro-Bold.otf in Resources */,
@@ -365,9 +392,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAAAABD1CDEE26400A33D49 /* UIView+.swift in Sources */,
+				BE8177131CFD306B008628A8 /* UIImage+.swift in Sources */,
 				BE8176FF1CFCC110008628A8 /* TimeMealTableViewCell.swift in Sources */,
 				BEAAAA971CDEE16200A33D49 /* ViewController.swift in Sources */,
 				BEAAAACD1CDEF19600A33D49 /* MainTabBarController.swift in Sources */,
+				BE8177161CFD3AF8008628A8 /* FoodItemModalViewController.swift in Sources */,
 				BE8177051CFCC269008628A8 /* Meal.swift in Sources */,
 				BEAAAACB1CDEEFF000A33D49 /* MacroKeys.swift in Sources */,
 				BE58785E1CE589E8005045A3 /* GridBackgroundView.swift in Sources */,
@@ -378,15 +407,18 @@
 				BE8176FA1CFCBF3A008628A8 /* TodayViewController.swift in Sources */,
 				BEAAAAC71CDEE39300A33D49 /* HomeViewController.swift in Sources */,
 				BEAAAAE51CDF20A000A33D49 /* BaseNavigationController.swift in Sources */,
+				BE81770F1CFD04FE008628A8 /* FoodItemModal.swift in Sources */,
 				BEAAAA9D1CDEE16200A33D49 /* MacroMania.xcdatamodeld in Sources */,
 				BE5BC8AC1CE1A0D700F4C6DA /* RadialGradientLayer.swift in Sources */,
 				BEAAAADE1CDF08B800A33D49 /* UIViewController+.swift in Sources */,
 				BEAAAAE21CDF0A1400A33D49 /* AddMacrosTableViewCell.swift in Sources */,
+				BE8177191CFD4FD6008628A8 /* UITextField+.swift in Sources */,
 				BEAAAAAC1CDEE1AA00A33D49 /* MeterView.swift in Sources */,
 				BE8177031CFCC261008628A8 /* FoodItem.swift in Sources */,
 				BEAAAAC31CDEE38600A33D49 /* BaseViewController.swift in Sources */,
 				BEAAAAE71CDFC22000A33D49 /* RadialDotsTimeLapseView.swift in Sources */,
 				BE5BC8AA1CE190E900F4C6DA /* RingGradientLayer.swift in Sources */,
+				BE81770C1CFCDC9B008628A8 /* AddMealViewController.swift in Sources */,
 				BE5BC8AE1CE1AA8900F4C6DA /* RadialGradientView.swift in Sources */,
 				BEAAAA951CDEE16200A33D49 /* AppDelegate.swift in Sources */,
 			);

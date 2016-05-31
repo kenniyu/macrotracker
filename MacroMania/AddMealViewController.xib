@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddMealViewController" customModule="MacroMania" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="pdY-wo-iuI" id="Jak-vb-sUE"/>
+                <outlet property="tableView" destination="gSy-pR-9XU" id="CnK-HZ-aqh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zeroStateLabel" destination="Wl3-4V-7ri" id="ubn-by-vFr"/>
+                <outlet property="zeroStateView" destination="fyj-L1-sjz" id="aWC-nA-D5L"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gSy-pR-9XU">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IN7-u8-fgS"/>
+                        <outlet property="delegate" destination="-1" id="rUt-Bq-zEC"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyj-L1-sjz">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No items for this meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-4V-7ri">
+                            <rect key="frame" x="20" y="290" width="560" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdY-wo-iuI">
+                            <rect key="frame" x="225" y="319" width="150" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="Po1-Gp-93z"/>
+                            </constraints>
+                            <state key="normal" title="Add One Now"/>
+                            <connections>
+                                <action selector="tappedAddItem:" destination="-1" eventType="touchUpInside" id="Eat-fC-U2g"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Wl3-4V-7ri" firstAttribute="centerY" secondItem="fyj-L1-sjz" secondAttribute="centerY" id="3IS-VT-uQv"/>
+                        <constraint firstAttribute="trailing" secondItem="Wl3-4V-7ri" secondAttribute="trailing" constant="20" id="5CL-MD-CGB"/>
+                        <constraint firstItem="pdY-wo-iuI" firstAttribute="top" secondItem="Wl3-4V-7ri" secondAttribute="bottom" constant="8" id="GuX-kK-pYi"/>
+                        <constraint firstItem="Wl3-4V-7ri" firstAttribute="leading" secondItem="fyj-L1-sjz" secondAttribute="leading" constant="20" id="byl-r0-uXK"/>
+                        <constraint firstItem="pdY-wo-iuI" firstAttribute="centerX" secondItem="fyj-L1-sjz" secondAttribute="centerX" id="qOo-Ja-Xk6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fyj-L1-sjz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9SX-UR-tfU"/>
+                <constraint firstAttribute="bottom" secondItem="gSy-pR-9XU" secondAttribute="bottom" id="I0b-er-PIt"/>
+                <constraint firstAttribute="trailing" secondItem="gSy-pR-9XU" secondAttribute="trailing" id="Ish-r7-QEP"/>
+                <constraint firstItem="gSy-pR-9XU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QFw-Ha-2lP"/>
+                <constraint firstItem="fyj-L1-sjz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kaR-UD-x7l"/>
+                <constraint firstItem="gSy-pR-9XU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ld9-2o-fPf"/>
+                <constraint firstAttribute="trailing" secondItem="fyj-L1-sjz" secondAttribute="trailing" id="o8s-Jw-QTX"/>
+                <constraint firstAttribute="bottom" secondItem="fyj-L1-sjz" secondAttribute="bottom" id="vZT-T3-OGV"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

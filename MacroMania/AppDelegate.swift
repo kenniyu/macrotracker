@@ -158,12 +158,12 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupNavBar() {
         let topBarTextAttributes = [
             NSForegroundColorAttributeName: Styles.Colors.AppSilver,
-            NSFontAttributeName: Styles.Fonts.MediumXXLarge!
+            NSFontAttributeName: Styles.Fonts.MediumXLarge!
         ]
         
         let barButtonTextAttributes = [
             NSForegroundColorAttributeName: Styles.Colors.AppSilver,
-            NSFontAttributeName: Styles.Fonts.MediumXLarge!
+            NSFontAttributeName: Styles.Fonts.MediumLarge!
         ]
         
         let navigationBarAppearance = UINavigationBar.appearance()

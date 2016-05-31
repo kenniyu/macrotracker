@@ -23,8 +23,8 @@ extension UIViewController {
     }
     
     public func createAddButton() -> UIBarButtonItem {
-        let closeBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(UIViewController.add))
-        return closeBtn
+        let addButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(UIViewController.add))
+        return addButton
     }
     
     public func addRightBarButtons(buttons: [UIBarButtonItem]) {
