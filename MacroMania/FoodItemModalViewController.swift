@@ -15,7 +15,9 @@ public protocol FoodItemModalViewControllerDelegate {
 public
 class FoodItemModalViewController: BaseViewController {
 
+    @IBOutlet weak var modalContainerView: UIView!
     @IBOutlet weak var foodItemModal: FoodItemModal!
+    @IBOutlet weak var modalContainerViewBottomConstraint: NSLayoutConstraint!
     
     public static let kNibName = "FoodItemModalViewController"
     public var foodItemModalViewControllerDelegate: FoodItemModalViewControllerDelegate?
@@ -39,10 +41,11 @@ class FoodItemModalViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         setup()
+        keyboardDelegate = self
     }
     
     public override func setupStyles() {
-        view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
     }
     
     public func setup() {
@@ -59,5 +62,21 @@ extension FoodItemModalViewController: FoodItemModalDelegate {
     
     public func didTapClose() {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+extension FoodItemModalViewController: KeyboardDelegate {
+    public func keyboardWillShow(keyboardHeight: CGFloat, animationOptions: UIViewAnimationOptions, animationDuration: Double) {
+        UIView.animateWithDuration(0.4) { () -> Void in
+            self.modalContainerViewBottomConstraint.constant = keyboardHeight/2
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    public func keyboardWillHide(keyboardHeight: CGFloat, animationOptions: UIViewAnimationOptions, animationDuration: Double) {
+        UIView.animateWithDuration(0.4) { () -> Void in
+            self.modalContainerViewBottomConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        }
     }
 }

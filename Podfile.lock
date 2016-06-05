@@ -1,0 +1,16 @@
+PODS:
+  - Alamofire (3.4.0)
+  - JTCalendar (2.1.5)
+  - ObjectMapper (1.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - JTCalendar (~> 2.0)
+  - ObjectMapper (~> 1.1)
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  JTCalendar: 57a4420f12d10c93c3b28da96803e7043d1c9281
+  ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
+
+COCOAPODS: 0.39.0

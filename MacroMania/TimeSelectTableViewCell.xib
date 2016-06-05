@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="KGk-i7-Jjw" customClass="TimeSelectTableViewCell" customModule="MacroMania" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="93.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" id="gLr-YM-85X">
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="93.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S81-aj-pJ4">
+                                <rect key="frame" x="8" y="23" width="59" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tappedSelectButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IpY-AV-7yk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sDP-Qc-1ap">
+                                <rect key="frame" x="75" y="23" width="68" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tappedSelectButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oOb-nl-cC9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SoN-wE-Su8">
+                                <rect key="frame" x="245" y="24" width="103" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tappedSelectButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kmM-GA-9xv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7rL-E8-BRR">
+                                <rect key="frame" x="151" y="24" width="86" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tappedSelectButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7jU-tU-sq8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="gLr-YM-85X" id="IVA-zP-dHR"/>
+                <outlet property="selectButton" destination="S81-aj-pJ4" id="Wrj-95-cND"/>
+                <outlet property="selectButton2" destination="sDP-Qc-1ap" id="eDp-Tj-9TT"/>
+                <outlet property="selectButton3" destination="7rL-E8-BRR" id="9Ca-Qf-7yd"/>
+                <outlet property="selectButton4" destination="SoN-wE-Su8" id="wGB-lF-QWr"/>
+            </connections>
+            <point key="canvasLocation" x="406" y="353"/>
+        </tableViewCell>
+    </objects>
+</document>

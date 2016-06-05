@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3696B8FAC71D65ACD839B191 /* Pods_MacroMania.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57F667465C91DCC35103006 /* Pods_MacroMania.framework */; };
 		BE58785E1CE589E8005045A3 /* GridBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58785D1CE589E8005045A3 /* GridBackgroundView.swift */; };
 		BE5878601CE58A30005045A3 /* GridBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE58785F1CE58A30005045A3 /* GridBackgroundView.xib */; };
 		BE5BC8AA1CE190E900F4C6DA /* RingGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC8A91CE190E900F4C6DA /* RingGradientLayer.swift */; };
 		BE5BC8AC1CE1A0D700F4C6DA /* RadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC8AB1CE1A0D700F4C6DA /* RadialGradientLayer.swift */; };
 		BE5BC8AE1CE1AA8900F4C6DA /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC8AD1CE1AA8900F4C6DA /* RadialGradientView.swift */; };
+		BE65F5D71CFE956E008F4116 /* PickerModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE65F5D61CFE956E008F4116 /* PickerModalView.swift */; };
+		BE65F5D91CFE958F008F4116 /* PickerModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE65F5D81CFE958F008F4116 /* PickerModalView.xib */; };
+		BE65F5DC1CFE96F5008F4116 /* PickerModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE65F5DA1CFE96F5008F4116 /* PickerModalViewController.swift */; };
+		BE65F5DD1CFE96F5008F4116 /* PickerModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE65F5DB1CFE96F5008F4116 /* PickerModalViewController.xib */; };
 		BE8176FA1CFCBF3A008628A8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8176F81CFCBF3A008628A8 /* TodayViewController.swift */; };
 		BE8176FB1CFCBF3A008628A8 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8176F91CFCBF3A008628A8 /* TodayViewController.xib */; };
 		BE8176FF1CFCC110008628A8 /* TimeMealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8176FD1CFCC110008628A8 /* TimeMealTableViewCell.swift */; };
@@ -61,14 +66,27 @@
 		BEAAAAE51CDF20A000A33D49 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAE41CDF20A000A33D49 /* BaseNavigationController.swift */; };
 		BEAAAAE71CDFC22000A33D49 /* RadialDotsTimeLapseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAAAAE61CDFC22000A33D49 /* RadialDotsTimeLapseView.swift */; };
 		BEAAAAE91CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAAAAE81CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib */; };
+		BED179671D0407C500B597CD /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED179661D0407C500B597CD /* SessionManager.swift */; };
+		BED179691D0407F000B597CD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED179681D0407F000B597CD /* NetworkManager.swift */; };
+		BED1796B1D04082200B597CD /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED1796A1D04082200B597CD /* Dictionary+.swift */; };
+		BED1796D1D04083A00B597CD /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED1796C1D04083A00B597CD /* ResponseObject.swift */; };
+		BED179701D04088800B597CD /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED1796E1D04088800B597CD /* LogInViewController.swift */; };
+		BED179711D04088800B597CD /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED1796F1D04088800B597CD /* LogInViewController.xib */; };
+		BED179741D040DE700B597CD /* TimeSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED179721D040DE700B597CD /* TimeSelectTableViewCell.swift */; };
+		BED179751D040DE700B597CD /* TimeSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED179731D040DE700B597CD /* TimeSelectTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3914FCD68FD712137360A1A5 /* Pods-MacroMania.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroMania.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacroMania/Pods-MacroMania.release.xcconfig"; sourceTree = "<group>"; };
 		BE58785D1CE589E8005045A3 /* GridBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridBackgroundView.swift; sourceTree = "<group>"; };
 		BE58785F1CE58A30005045A3 /* GridBackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridBackgroundView.xib; sourceTree = "<group>"; };
 		BE5BC8A91CE190E900F4C6DA /* RingGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingGradientLayer.swift; sourceTree = "<group>"; };
 		BE5BC8AB1CE1A0D700F4C6DA /* RadialGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientLayer.swift; sourceTree = "<group>"; };
 		BE5BC8AD1CE1AA8900F4C6DA /* RadialGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientView.swift; sourceTree = "<group>"; };
+		BE65F5D61CFE956E008F4116 /* PickerModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerModalView.swift; sourceTree = "<group>"; };
+		BE65F5D81CFE958F008F4116 /* PickerModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerModalView.xib; sourceTree = "<group>"; };
+		BE65F5DA1CFE96F5008F4116 /* PickerModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerModalViewController.swift; sourceTree = "<group>"; };
+		BE65F5DB1CFE96F5008F4116 /* PickerModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerModalViewController.xib; sourceTree = "<group>"; };
 		BE8176F81CFCBF3A008628A8 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		BE8176F91CFCBF3A008628A8 /* TodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
 		BE8176FD1CFCC110008628A8 /* TimeMealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeMealTableViewCell.swift; sourceTree = "<group>"; };
@@ -120,6 +138,16 @@
 		BEAAAAE41CDF20A000A33D49 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		BEAAAAE61CDFC22000A33D49 /* RadialDotsTimeLapseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialDotsTimeLapseView.swift; sourceTree = "<group>"; };
 		BEAAAAE81CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadialDotsTimeLapseView.xib; sourceTree = "<group>"; };
+		BED179661D0407C500B597CD /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		BED179681D0407F000B597CD /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BED1796A1D04082200B597CD /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
+		BED1796C1D04083A00B597CD /* ResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
+		BED1796E1D04088800B597CD /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		BED1796F1D04088800B597CD /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		BED179721D040DE700B597CD /* TimeSelectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSelectTableViewCell.swift; sourceTree = "<group>"; };
+		BED179731D040DE700B597CD /* TimeSelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeSelectTableViewCell.xib; sourceTree = "<group>"; };
+		CB2CB1F4CBB262A3E0127F19 /* Pods-MacroMania.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroMania.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacroMania/Pods-MacroMania.debug.xcconfig"; sourceTree = "<group>"; };
+		D57F667465C91DCC35103006 /* Pods_MacroMania.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroMania.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,17 +155,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3696B8FAC71D65ACD839B191 /* Pods_MacroMania.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35B930C1AD56EE5427D268C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB2CB1F4CBB262A3E0127F19 /* Pods-MacroMania.debug.xcconfig */,
+				3914FCD68FD712137360A1A5 /* Pods-MacroMania.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BE8177011CFCC251008628A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				BE8177021CFCC261008628A8 /* FoodItem.swift */,
 				BE8177041CFCC269008628A8 /* Meal.swift */,
+				BED1796C1D04083A00B597CD /* ResponseObject.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -155,6 +194,8 @@
 			children = (
 				BEAAAA931CDEE16200A33D49 /* MacroMania */,
 				BEAAAA921CDEE16200A33D49 /* Products */,
+				35B930C1AD56EE5427D268C6 /* Pods */,
+				E7BBC8390D597E346450A56B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +210,7 @@
 		BEAAAA931CDEE16200A33D49 /* MacroMania */ = {
 			isa = PBXGroup;
 			children = (
+				BED179651D0407BB00B597CD /* Managers */,
 				BE8177061CFCC68E008628A8 /* Utils */,
 				BE8177011CFCC251008628A8 /* Models */,
 				BEAAAAC91CDEEFE500A33D49 /* Constants */,
@@ -212,6 +254,8 @@
 				BE58785F1CE58A30005045A3 /* GridBackgroundView.xib */,
 				BE81770E1CFD04FE008628A8 /* FoodItemModal.swift */,
 				BE8177101CFD050E008628A8 /* FoodItemModal.xib */,
+				BE65F5D61CFE956E008F4116 /* PickerModalView.swift */,
+				BE65F5D81CFE958F008F4116 /* PickerModalView.xib */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -252,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				BEAAAABC1CDEE26400A33D49 /* UIView+.swift */,
+				BED1796A1D04082200B597CD /* Dictionary+.swift */,
 				BEAAAAD71CDEF71F00A33D49 /* UIColor+.swift */,
 				BEAAAADD1CDF08B800A33D49 /* UIViewController+.swift */,
 				BEAAAAE41CDF20A000A33D49 /* BaseNavigationController.swift */,
@@ -276,6 +321,10 @@
 				BE81770B1CFCDC9B008628A8 /* AddMealViewController.xib */,
 				BE8177141CFD3AF8008628A8 /* FoodItemModalViewController.swift */,
 				BE8177151CFD3AF8008628A8 /* FoodItemModalViewController.xib */,
+				BE65F5DA1CFE96F5008F4116 /* PickerModalViewController.swift */,
+				BE65F5DB1CFE96F5008F4116 /* PickerModalViewController.xib */,
+				BED1796E1D04088800B597CD /* LogInViewController.swift */,
+				BED1796F1D04088800B597CD /* LogInViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -295,8 +344,27 @@
 				BEAAAAE11CDF0A1400A33D49 /* AddMacrosTableViewCell.xib */,
 				BE8176FD1CFCC110008628A8 /* TimeMealTableViewCell.swift */,
 				BE8176FE1CFCC110008628A8 /* TimeMealTableViewCell.xib */,
+				BED179721D040DE700B597CD /* TimeSelectTableViewCell.swift */,
+				BED179731D040DE700B597CD /* TimeSelectTableViewCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		BED179651D0407BB00B597CD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BED179661D0407C500B597CD /* SessionManager.swift */,
+				BED179681D0407F000B597CD /* NetworkManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		E7BBC8390D597E346450A56B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D57F667465C91DCC35103006 /* Pods_MacroMania.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,9 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEAAAAA61CDEE16200A33D49 /* Build configuration list for PBXNativeTarget "MacroMania" */;
 			buildPhases = (
+				87CE2D713083CD8BD0812D28 /* Check Pods Manifest.lock */,
 				BEAAAA8D1CDEE16200A33D49 /* Sources */,
 				BEAAAA8E1CDEE16200A33D49 /* Frameworks */,
 				BEAAAA8F1CDEE16200A33D49 /* Resources */,
+				874052F62827E7E3109CCFFA /* Embed Pods Frameworks */,
+				10E7DD7F55075BEF43B41BB6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,14 +439,18 @@
 				BEAAAAC41CDEE38600A33D49 /* BaseViewController.xib in Resources */,
 				BE5878601CE58A30005045A3 /* GridBackgroundView.xib in Resources */,
 				BE81770D1CFCDC9B008628A8 /* AddMealViewController.xib in Resources */,
+				BED179711D04088800B597CD /* LogInViewController.xib in Resources */,
 				BEAAAAD41CDEF21300A33D49 /* BlenderPro-MediumItalic.otf in Resources */,
 				BEAAAAD61CDEF21300A33D49 /* BlenderPro-ThinItalic.otf in Resources */,
 				BEAAAAE91CDFC25F00A33D49 /* RadialDotsTimeLapseView.xib in Resources */,
 				BEAAAA9F1CDEE16200A33D49 /* Assets.xcassets in Resources */,
+				BE65F5D91CFE958F008F4116 /* PickerModalView.xib in Resources */,
 				BE8177111CFD050E008628A8 /* FoodItemModal.xib in Resources */,
+				BED179751D040DE700B597CD /* TimeSelectTableViewCell.xib in Resources */,
 				BEAAAADC1CDF083E00A33D49 /* AddMacrosViewController.xib in Resources */,
 				BEAAAAD21CDEF21300A33D49 /* BlenderPro-Heavy.otf in Resources */,
 				BEAAAACE1CDEF21300A33D49 /* BlenderPro-Bold.otf in Resources */,
+				BE65F5DD1CFE96F5008F4116 /* PickerModalViewController.xib in Resources */,
 				BEAAAAE31CDF0A1400A33D49 /* AddMacrosTableViewCell.xib in Resources */,
 				BEAAAAD01CDEF21300A33D49 /* BlenderPro-Book.otf in Resources */,
 				BEAAAABF1CDEE2BA00A33D49 /* MeterView.xib in Resources */,
@@ -386,6 +461,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10E7DD7F55075BEF43B41BB6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacroMania/Pods-MacroMania-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		874052F62827E7E3109CCFFA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacroMania/Pods-MacroMania-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87CE2D713083CD8BD0812D28 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BEAAAA8D1CDEE16200A33D49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -395,16 +518,21 @@
 				BE8177131CFD306B008628A8 /* UIImage+.swift in Sources */,
 				BE8176FF1CFCC110008628A8 /* TimeMealTableViewCell.swift in Sources */,
 				BEAAAA971CDEE16200A33D49 /* ViewController.swift in Sources */,
+				BED179741D040DE700B597CD /* TimeSelectTableViewCell.swift in Sources */,
+				BE65F5DC1CFE96F5008F4116 /* PickerModalViewController.swift in Sources */,
 				BEAAAACD1CDEF19600A33D49 /* MainTabBarController.swift in Sources */,
 				BE8177161CFD3AF8008628A8 /* FoodItemModalViewController.swift in Sources */,
 				BE8177051CFCC269008628A8 /* Meal.swift in Sources */,
 				BEAAAACB1CDEEFF000A33D49 /* MacroKeys.swift in Sources */,
 				BE58785E1CE589E8005045A3 /* GridBackgroundView.swift in Sources */,
+				BED179691D0407F000B597CD /* NetworkManager.swift in Sources */,
+				BED1796B1D04082200B597CD /* Dictionary+.swift in Sources */,
 				BEAAAAD81CDEF71F00A33D49 /* UIColor+.swift in Sources */,
 				BE8177081CFCC697008628A8 /* TextUtils.swift in Sources */,
 				BEAAAADB1CDF083E00A33D49 /* AddMacrosViewController.swift in Sources */,
 				BEAAAAAF1CDEE1E400A33D49 /* Styles.swift in Sources */,
 				BE8176FA1CFCBF3A008628A8 /* TodayViewController.swift in Sources */,
+				BED179701D04088800B597CD /* LogInViewController.swift in Sources */,
 				BEAAAAC71CDEE39300A33D49 /* HomeViewController.swift in Sources */,
 				BEAAAAE51CDF20A000A33D49 /* BaseNavigationController.swift in Sources */,
 				BE81770F1CFD04FE008628A8 /* FoodItemModal.swift in Sources */,
@@ -412,6 +540,8 @@
 				BE5BC8AC1CE1A0D700F4C6DA /* RadialGradientLayer.swift in Sources */,
 				BEAAAADE1CDF08B800A33D49 /* UIViewController+.swift in Sources */,
 				BEAAAAE21CDF0A1400A33D49 /* AddMacrosTableViewCell.swift in Sources */,
+				BE65F5D71CFE956E008F4116 /* PickerModalView.swift in Sources */,
+				BED1796D1D04083A00B597CD /* ResponseObject.swift in Sources */,
 				BE8177191CFD4FD6008628A8 /* UITextField+.swift in Sources */,
 				BEAAAAAC1CDEE1AA00A33D49 /* MeterView.swift in Sources */,
 				BE8177031CFCC261008628A8 /* FoodItem.swift in Sources */,
@@ -421,6 +551,7 @@
 				BE81770C1CFCDC9B008628A8 /* AddMealViewController.swift in Sources */,
 				BE5BC8AE1CE1AA8900F4C6DA /* RadialGradientView.swift in Sources */,
 				BEAAAA951CDEE16200A33D49 /* AppDelegate.swift in Sources */,
+				BED179671D0407C500B597CD /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +664,7 @@
 		};
 		BEAAAAA71CDEE16200A33D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2CB1F4CBB262A3E0127F19 /* Pods-MacroMania.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MacroMania/Info.plist;
@@ -544,6 +676,7 @@
 		};
 		BEAAAAA81CDEE16200A33D49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3914FCD68FD712137360A1A5 /* Pods-MacroMania.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MacroMania/Info.plist;

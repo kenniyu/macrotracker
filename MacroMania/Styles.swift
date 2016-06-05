@@ -31,6 +31,7 @@ struct Styles {
         
         static let AppBackground = UIColor(red: 19/255.0, green: 19/255.0, blue: 19/255.0, alpha: 1)
         static let AppGray = UIColor(hexString: "A4A4A4")
+        static let AppDarkGray = UIColor(hexString: "666666")
         static let AppLightGray = UIColor(hexString: "d9d9d9")
         static let AppSilver = UIColor(hexString: "EAEAEA")
         static let AppPurple = UIColor(hexString: "7A36A8")
@@ -76,7 +77,11 @@ struct Styles {
         static let BarMin = UIColor(red: 0/255.0, green: 77/255.0, blue: 104/255.0, alpha: 1.0)
     }
     
-    struct Fonts {
+    class Fonts {
+        class func boldFontWithSize(fontSize: CGFloat) -> UIFont! {
+            return UIFont(name: "BlenderPro-Bold", size: fontSize)
+        }
+        
         static let Medium = UIFont(name: "BlenderPro-Medium", size: 26.0)
         
         static let ThinXSmall = UIFont(name: "BlenderPro-Thin", size: 12.0)

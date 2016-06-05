@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodayViewController" customModule="MacroMania" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="mwk-1J-YYl" id="BUc-Tc-qX8"/>
+                <outlet property="calendarContainerView" destination="gui-ab-k4s" id="X3t-wL-8em"/>
+                <outlet property="calendarContainerViewTopConstraint" destination="HRJ-ap-i5t" id="D8G-sD-HR2"/>
+                <outlet property="calendarContentView" destination="wjY-Tv-5G7" id="ryS-8s-oHL"/>
+                <outlet property="calendarMenuView" destination="G84-56-yIS" id="EYP-wj-wk2"/>
+                <outlet property="calendarWeekDayView" destination="p6U-W9-oAO" id="r0s-MX-XLh"/>
                 <outlet property="tableView" destination="8Tg-Aq-B0R" id="gO8-JS-hU1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,14 +31,79 @@
                         <outlet property="delegate" destination="-1" id="eS3-ml-bpK"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gui-ab-k4s">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G84-56-yIS" customClass="JTCalendarMenuView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="32"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="mgD-hb-j5o"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6U-W9-oAO" customClass="JTCalendarWeekDayView">
+                            <rect key="frame" x="0.0" y="32" width="600" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Hvz-BI-3IK"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjY-Tv-5G7" customClass="JTVerticalCalendarView">
+                            <rect key="frame" x="0.0" y="56" width="600" height="184"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="BCO-VW-Nmt"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="BCO-VW-Nmt"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="p6U-W9-oAO" firstAttribute="leading" secondItem="gui-ab-k4s" secondAttribute="leading" id="0HU-WQ-05R"/>
+                        <constraint firstItem="wjY-Tv-5G7" firstAttribute="leading" secondItem="gui-ab-k4s" secondAttribute="leading" id="B0Z-un-RMX"/>
+                        <constraint firstItem="G84-56-yIS" firstAttribute="leading" secondItem="gui-ab-k4s" secondAttribute="leading" id="EvW-nW-lAp"/>
+                        <constraint firstItem="G84-56-yIS" firstAttribute="top" secondItem="gui-ab-k4s" secondAttribute="top" id="FbQ-ee-1PY"/>
+                        <constraint firstAttribute="trailing" secondItem="G84-56-yIS" secondAttribute="trailing" id="GEx-uM-rfC"/>
+                        <constraint firstAttribute="bottom" secondItem="wjY-Tv-5G7" secondAttribute="bottom" id="GoP-od-dV5"/>
+                        <constraint firstAttribute="trailing" secondItem="p6U-W9-oAO" secondAttribute="trailing" id="bga-4n-UY8"/>
+                        <constraint firstItem="p6U-W9-oAO" firstAttribute="top" secondItem="G84-56-yIS" secondAttribute="bottom" id="gD7-8u-giU"/>
+                        <constraint firstItem="wjY-Tv-5G7" firstAttribute="top" secondItem="p6U-W9-oAO" secondAttribute="bottom" id="u4U-ab-snM"/>
+                        <constraint firstAttribute="trailing" secondItem="wjY-Tv-5G7" secondAttribute="trailing" id="wnm-yp-8an"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-screen" translatesAutoresizingMaskIntoConstraints="NO" id="mwk-1J-YYl">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="mwk-1J-YYl" secondAttribute="trailing" id="0FR-tD-nuI"/>
+                <constraint firstItem="gui-ab-k4s" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="258-4J-1iN"/>
+                <constraint firstAttribute="bottom" secondItem="mwk-1J-YYl" secondAttribute="bottom" id="3re-G5-RzL"/>
+                <constraint firstItem="gui-ab-k4s" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Buq-bX-Nrk"/>
+                <constraint firstItem="mwk-1J-YYl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F6L-GV-R3K"/>
+                <constraint firstItem="gui-ab-k4s" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HRJ-ap-i5t"/>
                 <constraint firstAttribute="bottom" secondItem="8Tg-Aq-B0R" secondAttribute="bottom" id="OGR-ch-JC3"/>
+                <constraint firstAttribute="trailing" secondItem="gui-ab-k4s" secondAttribute="trailing" id="P4X-3G-6E9"/>
+                <constraint firstItem="gui-ab-k4s" firstAttribute="top" secondItem="8Tg-Aq-B0R" secondAttribute="top" id="R7a-YV-OmH"/>
                 <constraint firstItem="8Tg-Aq-B0R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YTv-4f-Rrm"/>
+                <constraint firstItem="gui-ab-k4s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iMk-Il-kNj"/>
                 <constraint firstItem="8Tg-Aq-B0R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nCa-fe-7Jd"/>
                 <constraint firstAttribute="trailing" secondItem="8Tg-Aq-B0R" secondAttribute="trailing" id="tkq-LM-Gpy"/>
+                <constraint firstItem="mwk-1J-YYl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ykF-tR-jwz"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Buq-bX-Nrk"/>
+                    <exclude reference="R7a-YV-OmH"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="bg-screen" width="400" height="400"/>
+    </resources>
 </document>

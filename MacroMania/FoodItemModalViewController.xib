@@ -8,6 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodItemModalViewController" customModule="MacroMania" customModuleProvider="target">
             <connections>
                 <outlet property="foodItemModal" destination="SB7-pz-BOe" id="lQh-lj-56X"/>
+                <outlet property="modalContainerView" destination="ql4-iu-ile" id="777-vn-GRG"/>
+                <outlet property="modalContainerViewBottomConstraint" destination="L7s-ur-7Se" id="1PO-3M-kE4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,19 +18,31 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-pz-BOe" customClass="FoodItemModal" customModule="MacroMania" customModuleProvider="target">
-                    <rect key="frame" x="50" y="187.5" width="500" height="225"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ql4-iu-ile">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-pz-BOe" customClass="FoodItemModal" customModule="MacroMania" customModuleProvider="target">
+                            <rect key="frame" x="50" y="188" width="500" height="225"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="225" id="cdE-oF-9p3"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="225" id="cdE-oF-9p3"/>
+                        <constraint firstItem="SB7-pz-BOe" firstAttribute="leading" secondItem="ql4-iu-ile" secondAttribute="leading" constant="50" id="QSd-M0-iNo"/>
+                        <constraint firstAttribute="trailing" secondItem="SB7-pz-BOe" secondAttribute="trailing" constant="50" id="dQ1-qD-xjs"/>
+                        <constraint firstItem="SB7-pz-BOe" firstAttribute="centerY" secondItem="ql4-iu-ile" secondAttribute="centerY" id="eC9-2k-h3e"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="SB7-pz-BOe" secondAttribute="trailing" constant="50" id="muB-lY-kFg"/>
-                <constraint firstItem="SB7-pz-BOe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="sAY-B3-bWJ"/>
-                <constraint firstItem="SB7-pz-BOe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yCW-ab-rad"/>
+                <constraint firstAttribute="bottom" secondItem="ql4-iu-ile" secondAttribute="bottom" id="L7s-ur-7Se"/>
+                <constraint firstAttribute="trailing" secondItem="ql4-iu-ile" secondAttribute="trailing" id="avC-Oq-7Xy"/>
+                <constraint firstItem="ql4-iu-ile" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iVz-aj-imB"/>
+                <constraint firstItem="ql4-iu-ile" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tIp-3W-Q8w"/>
             </constraints>
         </view>
     </objects>

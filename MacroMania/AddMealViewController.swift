@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 public class AddMealViewController: BaseViewController {
     // IBOutlets
@@ -17,12 +18,16 @@ public class AddMealViewController: BaseViewController {
     
     public static let kNibName = "AddMealViewController"
     
+    private var date: NSDate?
+    private var cellModels: [TimeSelectTableViewCellModel] = []
+    
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    
-    public convenience init() {
+        
+    public convenience init(date: NSDate? = nil) {
         self.init(nibName: AddMealViewController.kNibName, bundle: nil)
+        self.date = date
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -32,16 +37,31 @@ public class AddMealViewController: BaseViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Add Meal"
+        if let date = date {
+            title = "Meal Times for \(formattedDate(date))"
+        }
+        view.backgroundColor = Styles.Colors.AppBackground
+        
         setupNavBar()
         setupTableView()
         setupZeroStateView()
         
-        toggleZeroStateView(true)
+        toggleZeroStateView(false)
+        
+        updateCellModels()
+        tableView.reloadData()
+    }
+    
+    public func formattedDate(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        let dateStr = dateFormatter.stringFromDate(date)
+        return dateStr
     }
     
     public override func setupStyles() {
         zeroStateLabel.font = Styles.Fonts.ThinLarge
+        zeroStateLabel.textColor = Styles.Colors.AppLightGray
         addButton.titleLabel?.font = Styles.Fonts.MediumLarge
         addButton.tintColor = Styles.Colors.AppGold
     }
@@ -55,8 +75,14 @@ public class AddMealViewController: BaseViewController {
         zeroStateView.backgroundColor = UIColor.clearColor()
     }
     
+    private func registerCells() {
+        tableView.registerNib(TimeSelectTableViewCell.nib, forCellReuseIdentifier: TimeSelectTableViewCell.reuseId)
+    }
+    
     private func setupTableView() {
         tableView.backgroundColor = UIColor.clearColor()
+        tableView.separatorStyle = .None
+        registerCells()
     }
     
     private func setupNavBar() {
@@ -67,6 +93,40 @@ public class AddMealViewController: BaseViewController {
     
     public override func done() {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    private func updateCellModels() {
+        cellModels = []
+        guard let date = date else { return }
+        guard let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian) else { return }
+        
+
+        for hour in 0..<12 {
+            var currentHour = hour * 2
+            let components = calendar.components([.Month, .Day, .Hour], fromDate: date)
+            components.hour = currentHour
+            guard let newDate = calendar.dateFromComponents(components) else { continue }
+            components.minute = 30
+            guard let newDate2 = calendar.dateFromComponents(components) else { continue }
+            
+            currentHour += 1
+            components.hour = currentHour
+            components.minute = 0
+            guard let newDate3 = calendar.dateFromComponents(components) else { continue }
+            
+            components.hour = currentHour
+            components.minute = 30
+            guard let newDate4 = calendar.dateFromComponents(components) else { continue }
+            
+            let timeSelectModels = [
+                TimeSelectModel(time: newDate, isSelected: false),
+                TimeSelectModel(time: newDate2, isSelected: false),
+                TimeSelectModel(time: newDate3, isSelected: false),
+                TimeSelectModel(time: newDate4, isSelected: false)
+            ]
+            let cellModel = TimeSelectTableViewCellModel(timeSelectModels: timeSelectModels)
+            cellModels.append(cellModel)
+        }
     }
     
     @IBAction func tappedAddItem(sender: UIButton) {
@@ -88,14 +148,20 @@ extension AddMealViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return cellModels.count
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier(TimeSelectTableViewCell.kReuseIdentifier, forIndexPath: indexPath) as? TimeSelectTableViewCell {
+            let cellModel = cellModels[indexPath.row]
+            cell.setup(cellModel)
+            return cell
+        }
         return UITableViewCell()
     }
     
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 0
+        let cellModel = cellModels[indexPath.row]
+        return TimeSelectTableViewCell.size(tableView.width, viewModel: cellModel).height
     }
 }

@@ -36,7 +36,7 @@ public class TimeMealTableViewCell: UITableViewCell {
     static let kNib = UINib(nibName: kClassName, bundle: NSBundle(forClass: TimeMealTableViewCell.self))
     static let kTimeLabelWidth: CGFloat = 80
     static let kTimeLabelHeight: CGFloat = 20
-    static let kCellVerticalPadding: CGFloat = 20
+    static let kCellVerticalPadding: CGFloat = 32
     static let kCellHorizontalPadding: CGFloat = 20
     static let kTimeTrackViewWidth: CGFloat = 2
     static let kMilestoneViewWidth: CGFloat = 12
@@ -194,7 +194,7 @@ public class TimeMealTableViewCell: UITableViewCell {
         guard let text = text else { return nil }
         
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 5.0
+        paragraphStyle.lineSpacing = 10.0
         
         let attrString = NSMutableAttributedString(string: text)
         attrString.addAttribute(NSParagraphStyleAttributeName,

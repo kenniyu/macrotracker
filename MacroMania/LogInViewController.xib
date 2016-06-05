@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="MacroMania" customModuleProvider="target">
+            <connections>
+                <outlet property="dividerView" destination="zjF-6V-gwo" id="UVd-or-ctr"/>
+                <outlet property="emailTextField" destination="4OU-Eb-dsG" id="dwX-op-CAB"/>
+                <outlet property="logInButton" destination="DBK-BS-1AF" id="4Rg-Cd-f2R"/>
+                <outlet property="passwordTextField" destination="Ezs-Y9-gce" id="Nb9-2p-I8N"/>
+                <outlet property="scrollView" destination="94G-bh-HT5" id="v5B-Co-TVf"/>
+                <outlet property="view" destination="Xjg-cJ-tV1" id="Sga-6r-SDf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Xjg-cJ-tV1">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94G-bh-HT5">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qic-Sy-JSP" userLabel="Placeholder View">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="600" id="TI8-cQ-ZEN"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4OU-Eb-dsG">
+                            <rect key="frame" x="60" y="280" width="480" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="mXz-zq-a47"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="yKl-mA-LYd"/>
+                            </constraints>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="yKl-mA-LYd"/>
+                                </mask>
+                            </variation>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjF-6V-gwo" userLabel="Divider View">
+                            <rect key="frame" x="60" y="320" width="480" height="1"/>
+                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="dzS-9g-pso"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ezs-Y9-gce">
+                            <rect key="frame" x="60" y="321" width="480" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="6va-SB-Kms"/>
+                                <constraint firstAttribute="height" constant="40" id="hgp-77-HLD"/>
+                            </constraints>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="6va-SB-Kms"/>
+                                    <exclude reference="hgp-77-HLD"/>
+                                </mask>
+                            </variation>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBK-BS-1AF">
+                            <rect key="frame" x="60" y="381" width="480" height="40"/>
+                            <color key="backgroundColor" red="0.51200000000000001" green="0.754" blue="0.34300000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Log In"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tappedLogIn:" destination="-1" eventType="touchUpInside" id="loV-a8-6IU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Qic-Sy-JSP" secondAttribute="bottom" id="1MH-32-SYB"/>
+                        <constraint firstItem="DBK-BS-1AF" firstAttribute="trailing" secondItem="Ezs-Y9-gce" secondAttribute="trailing" id="2t6-n4-S2d"/>
+                        <constraint firstItem="4OU-Eb-dsG" firstAttribute="centerY" secondItem="94G-bh-HT5" secondAttribute="centerY" id="5OL-ru-qWX"/>
+                        <constraint firstItem="DBK-BS-1AF" firstAttribute="leading" secondItem="Ezs-Y9-gce" secondAttribute="leading" id="60c-ZD-Jdq"/>
+                        <constraint firstAttribute="trailing" secondItem="zjF-6V-gwo" secondAttribute="trailing" constant="40" id="6Z3-W4-7Uz"/>
+                        <constraint firstItem="zjF-6V-gwo" firstAttribute="trailing" secondItem="4OU-Eb-dsG" secondAttribute="trailing" id="6nm-9G-vgr"/>
+                        <constraint firstItem="zjF-6V-gwo" firstAttribute="leading" secondItem="4OU-Eb-dsG" secondAttribute="leading" id="9Qn-Q1-yeI"/>
+                        <constraint firstItem="Qic-Sy-JSP" firstAttribute="width" secondItem="94G-bh-HT5" secondAttribute="width" id="BtR-Hc-pQ2"/>
+                        <constraint firstItem="Ezs-Y9-gce" firstAttribute="trailing" secondItem="4OU-Eb-dsG" secondAttribute="trailing" id="DIU-95-CDk"/>
+                        <constraint firstItem="Qic-Sy-JSP" firstAttribute="top" secondItem="94G-bh-HT5" secondAttribute="top" id="FTx-Ad-Nq3"/>
+                        <constraint firstItem="Ezs-Y9-gce" firstAttribute="height" secondItem="4OU-Eb-dsG" secondAttribute="height" id="HFG-2B-8J0"/>
+                        <constraint firstItem="zjF-6V-gwo" firstAttribute="top" secondItem="4OU-Eb-dsG" secondAttribute="bottom" id="JYf-sj-82o"/>
+                        <constraint firstItem="DBK-BS-1AF" firstAttribute="top" secondItem="Ezs-Y9-gce" secondAttribute="bottom" constant="20" id="Jhd-lN-UQD"/>
+                        <constraint firstItem="Ezs-Y9-gce" firstAttribute="top" secondItem="4OU-Eb-dsG" secondAttribute="bottom" constant="10" id="VLx-X8-FbG"/>
+                        <constraint firstItem="Ezs-Y9-gce" firstAttribute="leading" secondItem="4OU-Eb-dsG" secondAttribute="leading" id="W35-Nl-Sdu"/>
+                        <constraint firstItem="4OU-Eb-dsG" firstAttribute="leading" secondItem="94G-bh-HT5" secondAttribute="leading" constant="60" id="ZLG-Os-TSA"/>
+                        <constraint firstItem="DBK-BS-1AF" firstAttribute="height" secondItem="Ezs-Y9-gce" secondAttribute="height" id="ahY-nJ-hX0"/>
+                        <constraint firstItem="4OU-Eb-dsG" firstAttribute="centerX" secondItem="94G-bh-HT5" secondAttribute="centerX" id="aiL-Dk-hKG"/>
+                        <constraint firstItem="zjF-6V-gwo" firstAttribute="top" secondItem="4OU-Eb-dsG" secondAttribute="bottom" id="gNZ-aR-Lz6"/>
+                        <constraint firstAttribute="trailing" secondItem="Qic-Sy-JSP" secondAttribute="trailing" id="gzS-Lq-Ode"/>
+                        <constraint firstItem="Ezs-Y9-gce" firstAttribute="top" secondItem="zjF-6V-gwo" secondAttribute="bottom" id="iZc-uW-VbA"/>
+                        <constraint firstAttribute="trailing" secondItem="4OU-Eb-dsG" secondAttribute="trailing" constant="60" id="ogR-sT-eLe"/>
+                        <constraint firstItem="Ezs-Y9-gce" firstAttribute="top" secondItem="zjF-6V-gwo" secondAttribute="bottom" id="u5u-Vf-Spi"/>
+                        <constraint firstItem="zjF-6V-gwo" firstAttribute="leading" secondItem="94G-bh-HT5" secondAttribute="leading" constant="40" id="u69-R4-rMm"/>
+                        <constraint firstItem="Qic-Sy-JSP" firstAttribute="leading" secondItem="94G-bh-HT5" secondAttribute="leading" id="v6F-K9-aoS"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="aiL-Dk-hKG"/>
+                            <exclude reference="u69-R4-rMm"/>
+                            <exclude reference="JYf-sj-82o"/>
+                            <exclude reference="6Z3-W4-7Uz"/>
+                            <exclude reference="u5u-Vf-Spi"/>
+                            <exclude reference="VLx-X8-FbG"/>
+                        </mask>
+                    </variation>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="94G-bh-HT5" secondAttribute="bottom" id="1Qf-dB-q0C"/>
+                <constraint firstItem="94G-bh-HT5" firstAttribute="leading" secondItem="Xjg-cJ-tV1" secondAttribute="leading" id="a9p-nS-KB6"/>
+                <constraint firstAttribute="trailing" secondItem="94G-bh-HT5" secondAttribute="trailing" id="ahK-Ym-Ee8"/>
+                <constraint firstItem="94G-bh-HT5" firstAttribute="top" secondItem="Xjg-cJ-tV1" secondAttribute="top" id="t8e-tL-2JY"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
